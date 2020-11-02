@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<title>Flow Builder</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<!--Buttons css-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+
+<style>
+  body {
+   font-family: 'Roboto', sans-serif;
+<!--  background:  #1a5276 ;  /* fallback for old browsers */-->
+<!--  background: -webkit-linear-gradient(to right,    #2980b9 ,  #1a5276 );  /* Chrome 10-25, Safari 5.1-6 */-->
+<!--  background: linear-gradient(to right,   #2980b9 ,  #1a5276 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */-->
+  border-color: #ffffff;
+  width: 50%;
+  height: 5%;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  margin-left: 22%;
+  margin-right: 22%;
+  padding:2px;
+  }
+  .body {
+  margin: 0px;
+  }
+
+<!--.navbar {-->
+<!--    width: auto;-->
+<!--    height: auto;-->
+<!--}-->
+
+
+  .topnav {
+  margin-left: 40%;
+  float: left;
+}
+.border{
+  border: solid;
+}
+  .topnav :hover{
+  background-color: #ddd;
+  color: black;
+}
+  .sidenav-right {
+  height: 55%;
+  width: 30%;
+  ondrag: True;
+  cursor: resize;
+  overflow-y:scroll;
+  margin-right: 1%;
+  width: 40%;
+  margin-top: 1%;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  float: right;
+  background-color: #dbe0e1;
+  border-radius: 10px;
+  overflow-x: hidden;
+  padding-top: 0px;
+  position: fixed;
+}
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  margin-left: 1%;
+  width: 20%;
+  margin-top: 1%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #dbe0e1;
+  border : solid;
+  overflow-y: hidden;
+  padding-top: 0px;
+}
+.main{
+  background-color: none;
+
+}
+.sidenav-right a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #111111;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  position: move;
+  display: block;
+  border: none;
+  background: none;
+  width: 40%;
+  text-align: right;
+  cursor: pointer;
+  outline: none;
+}
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #111111;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.sidenav-right a:hover, .dropdown-btn:hover {
+  color:#111111;
+}
+/* On mouse-over */
+.sidenav :hover,{
+    width: auto;
+}
+
+.dropdown-btn:hover {
+  color:#111111;
+}
+
+/* Main content */
+#main.fullscreen {
+  margin-left: 00px; /* Same as the width of the sidenav */
+  font-size: 10px; /* Increased text to enable scrolling */
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+<!--    border: 3px dashed white;-->
+<!--    border-style: dashed ;-->
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #dbe0e1;
+  color: #111111;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #dbe0e1;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.topnav a:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+/* Some media queries for responsiveness */
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+ #dropZone1 {
+        left: 20px;
+        top: 20px;
+        right:10px;
+        bottom:20px;
+        background:white;
+<!--        vertical-align: Top;-->
+<!--        align-items: center;-->
+        background-color: rgb(255, 255, 255);
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UwZTBlMCIgb3BhY2l0eT0iMC4yIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTBlMGUwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=");
+        background-position: 0px 0px;
+        box-shadow: 0px 0px 2px 1px #e9e9e9;
+        cursor: pointer;
+        float:left;
+        padding:10px;
+        right: 56px; left: 358px; top: 113px; bottom: 38px; touch-action: none;
+        position: fixed;
+        overflow-x: auto; overflow-y:auto;
+}
+
+#containerdropzone1 {
+        width:765px;
+        min-height:765px;
+        left: 20px;
+        top: 20px;
+        right:10px;
+        bottom:20px;
+        background:white;
+        vertical-align: middle;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UwZTBlMCIgb3BhY2l0eT0iMC4yIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTBlMGUwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=");
+        background-position: 0px 0px;
+        box-shadow: 0px 0px 2px 1px #e9e9e9;
+        cursor: default;
+        float:left;
+        padding:10px;
+        right: 56px; left: 358px; top: 113px; bottom: 38px; touch-action: none; cursor: default; overflow-x: auto; overflow-y:auto;
+        }
+.dash{
+    border: 1px solid black;
+    display: inline-block;
+}
+input {
+    width: auto;
+    height: auto;
+}
+
+.hr {
+  border: 1px solid black;
+  width : auto;
+}
+.vl {
+  border-left: 2px solid black;
+  height: 400px;
+  display: inline-block;
+}
+.hl {
+  border-bottom: 2px solid black;
+  width: 40px;
+  display: inline-block;
+}
+.undo{
+  padding-right:20px;
+  background-color: #fb6bf5;
+  color:black;
+  width:100px;
+  height:50px;
+}
+.save{
+  padding-right:20px;
+  background-color:#24ee49;
+  color:black;
+  width:100px;
+  height:50px;
+}
+.prev{
+  padding-right:20px;
+  background-color:#e9f94a;
+  color:black;
+  width:100px;
+  height:50px;
+}
+#form{
+        width: auto;
+        height:auto;
+        position: absolute;
+        left: 23%;
+        top: 11%;
+        right:20px;
+        bottom:20px;
+        background:white;
+        display:none;
+        vertical-align: middle;
+        align-items: center;
+  }
+  .form_op_fields_class{
+    display: inline-block;
+    color:transparent;
+  }
+  .form_op_fields_class_elements{
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    /*padding: 10px;*/
+    margin: 0px 0px;
+    touch-action: none;
+    box-sizing: border-box;
+  }
+  .resize-drag1{
+      background-color: transparent;
+      border:1px solid transparent;
+      /*width:100%;*/
+      height: auto;
+      text-align:center;
+      padding:2px;
+      display: inline-block;
+      justify-content: center;
+      /*border:1px solid black;*/
+  }
+  .resize-container {
+       display: inline-block;
+       min-width:100%;
+       min-height: 240px;
+       border:4px solid black;
+    }
+  .rectangle {
+    height: 20px;
+    width: 50px;
+    background:transparent;
+    border:1px solid black;
+    display: inline-block
+  }
+  .container {
+    height: 400px;
+    width: 165px;
+    stroke="#000000";
+    background:transparent;
+    border:1px solid black;
+    display: inline-block
+  }
+  .hcontainer {
+    height: 165px;
+    width: 400px;
+    stroke="#000000";
+    background:transparent;
+    border:1px solid black;
+    display: inline-block;
+  }
+  .rrect {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1px; 
+    width: auto;
+    height:auto;
+    background-color:transparent;
+    display: inline-block
+  }
+  .rar{
+  position :absolute;
+  padding:0px 20px;
+  line-height: 0px;
+  top:20px;
+  display: inline-block;
+  color: white;
+  border-top: 2px solid black;
+  z-index:0;
+}
+
+.rar:before{
+  content:'';
+  position: absolute;
+  left: 100%;
+  z-index:10;
+  width: 23px;
+  height:20px;
+  display: inline-block;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(-45deg) translate(-10px,-24px);
+}
+.dar{
+  position :absolute;
+  padding:20px;
+  display: inline-block;
+  color: white;
+  border-left: 2px solid black;
+  left:5%;
+}
+
+.dar:before{
+  content:'';
+  position: absolute;
+  left: 10%;
+  top:100%;
+  z-index:10;
+  width: 23px;
+  height:20px;
+  display: inline-block;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(-45deg) translate(5px,-29px);
+}
+.lar{
+  position:absolute;
+  width:50px;
+  padding: 0px 1px;
+  line-height: 40px;
+  display: inline-block;
+  color: white;
+  border-bottom:2px solid black;
+  z-index:1;
+  top:10px;
+}
+.lar:before{
+  content: '';
+  position: absolute;
+  left: 100%;
+  z-index:-1;
+  width: 28px;
+  height: 28px;
+  left:20px;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  transform: rotate(-45deg) translate(-1px,-19px);
+}
+.uar{
+  position :absolute;
+  padding:20px;
+  display: inline-block;
+  color: white;
+  border-left: 2px solid black;
+  left:10%;
+}
+
+.uar:before{
+  content:'';
+  position: absolute;
+  left: 10%;
+  z-index:10;
+  width: 23px;
+  display: inline-block;
+  height:20px;
+  bottom:100%;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(-225deg) translate(30px,-5px);
+}
+.rdar{
+  position :absolute;
+  padding:20px;
+  display: inline-block;
+  color: white;
+  border-left: 2px solid black;
+  left:10%;
+}
+.rdar:before{
+  content:'';
+  position: absolute;
+  left: 10%;
+  z-index:10;
+  width: 23px;
+  display: inline-block;
+  height:20px;
+  bottom:100%;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(-225deg) translate(30px,-5px);
+}
+.ldar{
+  position :absolute;
+  padding:20px;
+  display: inline-block;
+  color: white;
+  border-left: 2px solid black;
+  left:10%;
+}
+.ldar:before{
+  content:'';
+  position: absolute;
+  left: 10%;
+  z-index:10;
+  width: 23px;
+  display: inline-block;
+  height:20px;
+  bottom:100%;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(-225deg) translate(30px,-5px);
+}
+
+.diamond {
+	margin:50px;
+	width:100px;
+	height:100px;
+<!--	background:red;-->
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+}
+.diamond-inner {
+	color:#fff;
+	font-weight:bold;
+	font-size:1.2em;
+	line-height:1.4em;
+	text-align:center;
+	transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	[B]width:100px;
+	height:100px;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.12.9/js/jsplumb.min.js"></script>
+<script>
+  interact('.resize-drag1')
+   .draggable({
+    onmove: window.dragMoveListener,
+    onend:function(event){
+      // console.log(event.target.parentNode);
+      for(var i=0;i!=json.length;i++){
+        if(json[i].node_id==event.target.id){
+          json[i].y=(event.target.getBoundingClientRect().top-event.target.parentNode.getBoundingClientRect().top)+'px';
+          json[i].x=(event.target.getBoundingClientRect().left-event.target.parentNode.getBoundingClientRect().left)+'px';
+          // console.log(json[i].x,json[i].y);
+          break;
+        }
+      }
+    },
+    restrict: {
+     /* drag:"#dropZone1",*/
+      restriction: 'parent',
+      elementRect: { top: 1, left: 1, bottom: 1, right: 1 }
+    },
+   });
+  function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+    // console.log("access");
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+</script>
+
+<script type="text/javascript">
+    /*FOR UNDO AND REDO OPERATIONS WE USE THE STACK CLASS FOR STORING ACTIONS OF FIELDS*/
+    class Stack {
+      constructor() 
+      { 
+          this.items = [];
+      } 
+      // push(item) 
+      push(element) 
+      { 
+          this.items.push(element);
+      }
+      // pop() 
+      pop()
+      { 
+        if (this.items.length == 0) 
+          return "Underflow"; 
+        return this.items.pop(); 
+      } 
+      // peek() 
+      peek() 
+      { 
+        return this.items[this.items.length - 1]; 
+      } 
+    }
+  </script>
+<script type="text/javascript">
+     window.onload=function(){
+
+        var mode = '{{mode}}'
+
+        if(mode == "view")
+        {
+            prev()
+        }
+        else
+        {
+           flowDetail()
+        }
+      };
+
+      function flowList(){
+
+        window.location = 'http://127.0.0.1:5000/api/v1/flow/'
+      }
+
+      function flowDetail()
+      {
+            var id = '{{id}}'
+
+            var flowurl = 'http://127.0.0.1:5000/api/v1/flow/'+id
+            $.ajax({
+                type:"GET",
+                url : flowurl,
+                contentType: 'application/json',
+                dataType:'json',
+                success:function(e){
+                    edit(e)
+                }
+              });
+      }
+      function edit(e)
+      {
+
+       var l=e.length;
+       var edit_data=e.nodes;
+        var edit_flow_name=e.name;
+          alert("Flowname must be saved with a new name when changes are done")
+
+        if(edit_data){
+          document.getElementById('flow_name').value=edit_flow_name;
+          flow_name=edit_flow_name;
+          document.getElementById('dropZone1').innerHTML="";
+          var edit_data_length=edit_data.length;
+          // json=document.getElementById('dropZone1');
+
+          for(var i=0;i<edit_data_length;i++){
+            var edit_item=edit_data[i].data;
+            var edit_element;
+              switch(edit_item.type){
+                case 'circle':
+                  edit_element=document.getElementById('dot_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  circle_id+=1;
+                  edit_element.style.fontSize=edit_item.fontSize;
+                  console.log(edit_item);
+                  break;
+                case 'end_circle':
+                  edit_element=document.getElementById('end_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  circle_id+=1;
+                  edit_element.style.fontSize=edit_item.fontSize;
+                  console.log(edit_item);
+                  break;
+                case 'right_arrow':
+                  edit_element=document.getElementById('arrow_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  arrow_id+=1;
+                  edit_element.children[0].style.width=edit_item.width;
+                  console.log(edit_item);
+                  break;
+                case 'left_arrow':
+                  edit_element=document.getElementById('larrow_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  larrow_id+=1;
+                  edit_element.children[0].style.width=edit_item.width;
+                  console.log(edit_item);
+                  break;
+                case 'down_arrow':
+                  edit_element=document.getElementById('darrow_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  darrow_id+=1;
+                  edit_element.children[0].style.height=edit_item.height;
+                  console.log(edit_item);
+                  break;
+                case 'up_arrow':
+                  edit_element=document.getElementById('uarrow_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  uarrow_id+=1;
+                  edit_element.children[0].style.height=edit_item.height;
+                  console.log(edit_item);
+                  break;
+                case 'text':
+                  edit_element=document.getElementById('text_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  text_id+=1;
+                  edit_element.style.fontSize=edit_item.fontSize;
+                  edit_element.innerHTML=edit_item.value;
+                  console.log(edit_item);
+                  break;
+                case 'diamond':
+                  edit_element=document.getElementById('diamond_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  diamond_id+=1;
+                  edit_element.style.fontSize=edit_item.fontSize;
+                  console.log(edit_item);
+                  break;
+                case 'hline':
+                  edit_element=document.getElementById('hline_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  hline_id+=1;
+                  edit_element.children[0].style.width=edit_item.width;
+                  console.log(edit_item);
+                  break;
+                case 'vline':
+                  edit_element=document.getElementById('vline_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  vline_id+=1;
+                  edit_element.children[0].style.height=edit_item.height;
+                  console.log(edit_item);
+                  break;
+                case 'rrect':
+                  edit_element=document.getElementById('rrect_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  rrect_id+=1;
+                  edit_element.children[0].style.width=edit_item.width;
+                  edit_element.children[0].style.height=edit_item.height;
+                  console.log(edit_item);
+                  break;
+                case 'rect':
+                  edit_element=document.getElementById('rect_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  rect_id+=1;
+                  edit_element.children[0].style.width=edit_item.width;
+                  edit_element.children[0].style.height=edit_item.height;
+                  console.log(edit_item);
+                  break;
+                case 'container':
+                  edit_element=document.getElementById('container_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  container_id+=1;
+                  edit_element.children[0].style.width=edit_item.width;
+                  edit_element.children[0].style.height=edit_item.height;
+                  console.log(edit_item);
+                  break;
+                case 'hcontainer':
+                  edit_element=document.getElementById('hcontainer_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  hcontainer__id+=1;
+                  edit_element.children[0].style.width=edit_item.width;
+                  edit_element.children[0].style.height=edit_item.height;
+                  console.log(edit_item);
+                  break;
+                case 'svg':
+                  edit_element=document.getElementById('svg_input').cloneNode(true);
+                  edit_element.id=edit_item.node_id;
+                  svg_id+=1;
+                  edit_element.children[0].style.width=edit_item.width;
+                  edit_element.children[0].style.height=edit_item.height;
+                  console.log(edit_item);
+                  break;
+              }
+              // edit_element.style.marginRight=edit_item.margin_right;
+              // edit_element.style.marginTop=edit_item.margin_top;
+              // edit_element.style.marginBottom=edit_item.margin_bottom;
+              // edit_element.style.marginLeft=edit_item.margin_left;
+              // edit_element.style.paddingRight=edit_item.padding_right;
+              // edit_element.style.paddingTop=edit_item.padding_top;
+              // edit_element.style.paddingBottom=edit_item.padding_bottom;
+              // edit_element.style.paddingLeft=edit_item.padding_left;
+              edit_element.style.position='absolute';
+              edit_element.style.top=edit_item.y;
+              edit_element.style.left=edit_item.x;
+              json.push(edit_item);
+              document.getElementById('dropZone1').appendChild(edit_element);
+          }
+          }
+          }
+
+  </script>
+<script type="text/javascript">
+  var dragged=null,json_data1=[],json_data2=[],json_data3=[],json_data4=[],json_data5=[],json_data6=[];
+  var json=[],circle_id=1,end_id=1,arrow_id=1,darrow_id=1,larrow_id=1,uarrow_id=1,text_id=1,number_id=1,svg_id=1,diamond_id=1,hline_id=1,vline_id=1,rect_id=1,rrect_id=1,container_id=1,hcontainer_id=1,rdarrow_id=1,ldarrow_id=1,flow_name="";
+  var f=0;var text,option_names,drop_zone=1,json=[];var db_no;var dataIndex=-1,x,y,edit_element,direction,stack = new Stack();
+  function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+  function drop(ev)
+  {
+      ev.preventDefault();
+      var node_id,type,status,font_size,width_size,height_size,cursor;
+      var data = ev.dataTransfer.getData("text");
+      var nodecopy;
+        if(data==="_circle"){
+          nodecopy=document.getElementById('dot_input').cloneNode(true);
+          nodecopy.id="circle"+circle_id;
+          node_id=nodecopy.id;status="Active";
+          type="circle";
+          cursor: drop(e);
+          circle_id=circle_id+1;
+          font_size=40 ;
+        }
+        else if(data==="_end"){
+          nodecopy=document.getElementById('end_input').cloneNode(true);
+          nodecopy.id="end_circle"+end_id;
+          node_id=nodecopy.id;status="Active";
+          type="end_circle";
+          end_id=end_id+1;
+          font_size=40 ;
+        }
+        else if(data==="_arrow"){
+          nodecopy=document.getElementById('arrow_input').cloneNode(true);
+          nodecopy.id="right_arrow"+arrow_id;
+          node_id=nodecopy.id;status="Active";
+          type="right_arrow";
+          arrow_id=arrow_id+1;
+          // width_size=45 ;
+        }
+        else if(data==="_text"){
+          nodecopy=document.getElementById('text_input').cloneNode(true);
+          nodecopy.id="text"+text_id;
+          node_id=nodecopy.id;status="Active";
+          type="text";
+          text_id=text_id+1;
+          font_size=40 ;
+        }
+        else if(data==="_container"){
+          nodecopy=document.getElementById('container_input').cloneNode(true);
+          nodecopy.id="container"+container_id;
+          node_id=nodecopy.id;status="Active";
+          type="container";
+          container_id=container_id+1;
+        }
+        else if(data==="_hcontainer"){
+          nodecopy=document.getElementById('hcontainer_input').cloneNode(true);
+          nodecopy.id="hcontainer"+hcontainer_id;
+          node_id=nodecopy.id;status="Active";
+          type="hcontainer";
+          hcontainer_id=hcontainer_id+1;
+        }
+        else if(data==="_darrow"){
+          nodecopy=document.getElementById('darrow_input').cloneNode(true);
+          nodecopy.id="down_arrow"+darrow_id;
+          node_id=nodecopy.id;status="Active";
+          type="down_arrow";
+          darrow_id=darrow_id+1;
+          // height_size=15 ;
+        }
+        else if(data==="_larrow"){
+          nodecopy=document.getElementById('larrow_input').cloneNode(true);
+          nodecopy.id="left_arrow"+larrow_id;
+          node_id=nodecopy.id;status="Active";
+          type="left_arrow";
+          larrow_id=larrow_id+1;
+          // width_size=25 ;
+        }
+        else if(data==="_uarrow"){
+          nodecopy=document.getElementById('uarrow_input').cloneNode(true);
+          nodecopy.id="up_arrow"+uarrow_id;
+          node_id=nodecopy.id;status="Active";
+          type="up_arrow";
+          uarrow_id=uarrow_id+1;
+          // height_size=15 ;
+        }
+        else if(data==="_rdarrow"){
+          nodecopy=document.getElementById('rdarrow_input').cloneNode(true);
+          nodecopy.id="rightdown_arrow"+rdarrow_id;
+          node_id=nodecopy.id;status="Active";
+          type="rightdown_arrow";
+          rdarrow_id=rdarrow_id+1;
+        }
+        else if(data==="_ldarrow"){
+          nodecopy=document.getElementById('ldarrow_input').cloneNode(true);
+          nodecopy.id="leftdown_arrow"+ldarrow_id;
+          node_id=nodecopy.id;status="Active";
+          type="leftdown_arrow";
+          ldarrow_id=ldarrow_id+1;
+        }
+        else if(data==="_diamond"){
+          nodecopy=document.getElementById('diamond_input').cloneNode(true);
+          nodecopy.id="diamond"+diamond_id;
+          node_id=nodecopy.id;status="Active";
+          type="diamond";
+          diamond_id=diamond_id+1;
+          font_size=45 ;
+        }
+        else if(data==="_vline"){
+          nodecopy=document.getElementById('vline_input').cloneNode(true);
+          nodecopy.id="vline"+vline_id;
+          node_id=nodecopy.id;status="Active";
+          type="vline";
+          vline_id=vline_id+1;
+          height_size=40 ;
+        }
+         else if(data==="_hline"){
+          nodecopy=document.getElementById('hline_input').cloneNode(true);
+          nodecopy.id="hline"+hline_id;
+          node_id=nodecopy.id;status="Active";
+          type="hline";
+          hline_id=hline_id+1;
+          width_size=40 ;
+        }
+        else if(data==="_rrect"){
+          nodecopy=document.getElementById('rrect_input').cloneNode(true);
+          nodecopy.id="rrect"+rrect_id;
+          node_id=nodecopy.id;status="Active";
+          type="rrect";
+          rrect_id=rrect_id+1;
+          width_size=45 ;
+          height_size=15 ;
+          direction=0;
+        }
+         else if(data==="_rect"){
+          nodecopy=document.getElementById('rect_input').cloneNode(true);
+          nodecopy.id="rect"+rect_id;
+          node_id=nodecopy.id;status="Active";
+          type="rect";
+          rect_id=rect_id+1;
+          width_size=45 ;
+          height_size=15 ;
+          direction=0;
+        }
+         else if(data==="editConnectors"){
+          nodecopy=document.getElementById('svg_input').cloneNode(true);
+          nodecopy.id="editConnectors"+editConnectors;
+          node_id=nodecopy.id;
+          status="Active";
+          type="editConnectors";
+          editConnectors=editConnectors_id+1;
+          width_size=45 ;
+          height_size=15 ;
+          direction=0;
+        }
+      // console.log(nodecopy.id);
+      ev.target.appendChild(nodecopy);
+      stack.push({"operation":"add","id":nodecopy.id});
+      y=ev.target.getBoundingClientRect().top-ev.target.parentNode.getBoundingClientRect().top+'px';
+      x=ev.target.getBoundingClientRect().left-ev.target.parentNode.getBoundingClientRect().left+'px';
+      // console.log("top:"+y+"left:"+x);
+      var data={"node_id":nodecopy.id,"type":type,"status":status,"x":x,"y":y,"margin_right":1 +'px',"margin_left":1+'px',"margin_bottom":1+'px',"margin_top":5+'px',"width":width_size+'px',"height":height_size+'px',"font_size":font_size+'px',"value":"","size":1+'px'};
+<!--      alert("data in dropzone");-->
+      json.push(data);
+
+  }
+  function fun(event) {
+      if (event.target.className !== "draggable") return;
+      dragged=event.target;
+      event.dataTransfer.setData("text", event.target.id);
+      event.target.style.border = "2px pink";
+    }
+
+    function Undo(event){
+        var node=stack.pop(); 
+        console.log(node);
+        switch(node.operation){
+          case "add":
+            if(node!='Underflow'){
+              var remove_id=document.getElementById(node.id);
+              json= json.filter(function(item) {
+                    return item.node_id !== node.id ;
+               });
+              remove_id.remove();
+              /*UPDATE THE DATA ABOUT FIELDS*/
+            }
+            break;
+          case "delete":
+              if(node!='Underflow'){var element;console.log(node.data[0].type);
+                    switch(node.data[0].type){
+                        case 'circle':
+                          element=document.getElementById('dot_input').cloneNode(true);
+                          element.id=node.id;
+                          console.log(element.id);
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'text':
+                          element=document.getElementById('text_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          console.log(element.id);
+                          element.innerHTML=node.data[0].value;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'end_circle':
+                          element=document.getElementById('end_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'right_arrow':
+                          edit_element=document.getElementById('arrow_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'left_arrow':
+                          edit_element=document.getElementById('larrow_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'down_arrow':
+                          edit_element=document.getElementById('darrow_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          darrow_id+=1;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'up_arrow':
+                          edit_element=document.getElementById('uarrow_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'rightdown_arrow':
+                          element=document.getElementById('rdarrow_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'leftdown_arrow':
+                          element=document.getElementById('ldarrow_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'diamond':
+                          element=document.getElementById('diamond_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.style.fontSize=node.data[0].fontSize;
+                          break;
+                        case 'hline':
+                          element=document.getElementById('hline_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.children[0].style.width=node.data[0].width;
+                          break;
+                        case 'vline':
+                          element=document.getElementById('vline_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.children[0].style.height=node.data[0].height;
+                          break;
+                        case 'rrect':
+                          element=document.getElementById('rrect_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.children[0].style.width=node.data[0].width;
+                          element.children[0].style.height=node.data[0].height;
+                          break;
+                        case 'rect':
+                          element=document.getElementById('rect_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.children[0].style.width=node.data[0].width;
+                          element.children[0].style.height=node.data[0].height;
+                          break;
+                        case 'container':
+                          element=document.getElementById('container_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.children[0].style.width=node.data[0].width;
+                          element.children[0].style.height=node.data[0].height;
+                          break;
+                        case 'hcontainer':
+                          element=document.getElementById('hcontainer_input').cloneNode(true);
+                          element.id=node.data[0].node_id;
+                          element.children[0].style.width=node.data[0].width;
+                          element.children[0].style.height=node.data[0].height;
+                          break;
+                        case 'svg':
+                          element = document.getElementById('svg_input').cloneNode(true);
+                          element.id=node.data[0].node.id;
+                      }
+                      if(node.data[0].margin_top){element.style.marginTop=node.data[0].margin_top;}
+                      if(node.data[0].margin_bottom){element.style.marginBottom=node.data[0].margin_bottom;}
+                      if(node.data[0].margin_left){element.style.marginLeft=node.data[0].margin_left;}
+                      if(node.data[0].margin_right){element.style.marginRight=node.data[0].margin_right;}
+                      if(node.data[0].padding_top){element.style.paddingTop=node.data[0].padding_top;}
+                      if(node.data[0].padding_bottom){element.style.paddingBottom=node.data[0].padding_bottom;}
+                      if(node.data[0].padding_left){element.style.paddingLeft=node.data[0].padding_left;}
+                      if(node.data[0].padding_right){element.style.paddingRight=node.data[0].padding_right;}
+                      element.style.position = "sticky";
+                      element.style.top=node.data[0].y;
+                      element.style.left=node.data[0].x;
+                      document.getElementById('dropZone1').appendChild(element);break;
+                      document.getElementById('form').appendChild(element);break;
+                      stack.push({"operation":"add","id":node.id});  
+                      var data={"node_id":node.id,"type":node.data[0].type,"status":"Active","width":node.data[0].width,"height":node.data[0].height,"margin_top":node.data[0].margin_top,"margin_bottom":node.data[0].margin_bottom,"margin_left":node.data[0].margin_left,"margin_right":node.data[0].margin_right,"fontSize":node.data[0].fontSize,"options":node.data[0].no_of_options,"option_names":node.data[0].option_names,'value':node.data[0].value,'x':node.data[0].x,'y':node.data[0].y};
+                      json.push(data);
+              }
+
+        } }
+  function save(e){
+
+        console.log(JSON.stringify(json))
+        var flow_id = '{{flow_id}}'
+
+        var id = '{{id}}'
+        if(flow_id != '')
+        {
+            if(flow_id == '0')
+            {
+                flow_id = id
+             }
+        }
+        else
+        {
+            flow_id = '0'
+        }
+
+      $.ajax({
+        type:"POST",
+        contentType: 'application/json',
+        data:JSON.stringify({'name':flow_name,'nodes':json,'data':{},'flow_id':flow_id,'version':'0'} ),
+        dataType: 'json',
+        url : 'http://127.0.0.1:5000/api/v1/flow/',
+        success : function(r){
+          alert("Successfully saved.");
+           window.location = 'http://127.0.0.1:5000/api/v1/flow/'
+        },
+        fail : function(){
+          alert("fail");
+        }
+      });
+      if(flow_name==''){
+          alert("Please Enter Flow Name");
+          return;
+        }
+      document.getElementById('dropZone1').style.display="none";
+      document.getElementById('flow_name').value="";
+  }
+  function prev(){
+      console.log("saved!!!");
+      var id = '{{id}}'
+      document.getElementById('dropZone1').style.display='none';
+
+      if(isNaN(id))
+      {
+        flowurl = 'http://127.0.0.1:5000/api/v1/flow'
+
+      }
+      else if(id != '')
+      {
+        flowurl = 'http://127.0.0.1:5000/api/v1/flow/'+id
+      }
+      var isText = 'false';
+
+      $.ajax({
+        type:"GET",
+        contentType: 'application/json',
+        dataType: 'json',
+        url : flowurl,
+        success:function(e){
+
+          console.log(e)
+          var br=document.createElement('br');
+          var l=e.length;
+          var element,item;
+          var fdata=e.nodes;
+          var data_l=e.nodes.length;
+          document.getElementById('form').style.display="block";
+          document.getElementById('form').innerHTML="";
+          var divPrevTop1=0;var divPrevTop2=0;var divPrevTop3=0;
+          for(var i=0;i<data_l;i++){
+            isText = 'false';
+            var item=fdata[i].data;
+            var id = fdata[i].id
+            console.log(item);
+            if(item.status=="Active"){
+             switch(item.type){
+              case 'circle':
+                element=document.getElementById('form_circle').cloneNode(true);
+                break;
+              case 'end_circle':
+                element=document.getElementById('form_end').cloneNode(true);
+                break;
+              case 'right_arrow':
+                element=document.getElementById('form_arrow').cloneNode(true);
+               break;
+              case 'left_arrow':
+                element=document.getElementById('form_larrow').cloneNode(true);
+                break;
+              case 'down_arrow':
+                element=document.getElementById('form_darrow').cloneNode(true);
+                break;
+              case 'up_arrow':
+                 element= document.getElementById('form_uarrow').cloneNode(true);
+                break;
+              case 'rightdown_arrow':
+                 element = document.getElementById ('form_rdarrow').cloneNode (true);
+                 break;
+              case 'leftdown_arrow':
+                 element = document.getElementById ('form_ldarrow').cloneNode (true);
+                 break;
+              case 'vline':
+                element=document.getElementById('form_vline').cloneNode(true);
+                break;
+              case 'hline':
+                element=document.getElementById('form_hline').cloneNode(true);
+                break;
+              case 'diamond':
+                element=document.getElementById('form_diamond').cloneNode(true);
+                 element.children[0].value = id
+                break;
+              case 'rect':
+                element=document.getElementById('form_rect').cloneNode(true);
+                element.children[0].value = id
+                break;
+              case 'rrect':
+                element=document.getElementById('form_rrect').cloneNode(true);
+                element.children[0].value = id
+                element.children[0].id = id
+                break;
+              case 'text':
+                element=document.getElementById('form_text').cloneNode(true);
+                isText = 'true';
+                break;
+              case 'container':
+                element=document.getElementById('form_container').cloneNode(true);
+                isText = 'true';
+                break;
+              case 'hcontainer':
+                element=document.getElementById('form_hcontainer').cloneNode(true);
+                isText = 'true';
+                break;
+              case 'editConnectors':
+                element=document.getElementById('form_editConnectors').cloneNode(true);
+                isText = 'true';
+                break;
+            }
+
+
+            element.style.position="absolute";
+            element.style.top=item.y;
+            element.style.left=item.x;
+            element.style.fontSize=item.fontSize;
+            if(item.value){
+                if(isText == 'true')
+                {
+                     element.innerHTML='<a href=http://127.0.0.1:5000/api/v1/flow/addForm/{{id}}/'+id+'>'+item.value+'</a>';
+                 }
+                 else
+                 {
+                    element.innerHTML=item.value;
+                 }
+            }
+            element.style.width=item.width;
+            element.style.height=item.height;
+            switch(item.type)
+            {
+             case 'circle':
+                element.children[0].style.width=item.width;
+                break;
+             case 'rrect':
+                element.children[0].style.width=item.width;
+                element.children[0].style.height=item.height;
+                break;
+             case 'rect':
+                element.children[0].style.width=item.width;
+                element.children[0].style.height=item.height;
+                break;
+             case 'container':
+                element.children[0].style.width=item.width;
+                element.children[0].style.height=item.height;
+                break;
+             case 'hcontainer':
+                element.children[0].style.width=item.width;
+                element.children[0].style.height=item.height;
+                break;
+             case 'text':
+                element.children[0].style.width=item.width;
+                element.children[0].style.height=itme.height;
+                break;
+             case 'vline':
+                element.children[0].style.height=item.height;
+                break;
+             case 'hline':
+                element.children[0].style.width=item.width;
+                break;
+             case 'right_arrow':
+                element.children[0].style.width=item.width;
+                break;
+             case 'left_arrow':
+                element.children[0].style.width=item.width;
+             case 'down_arrow':
+                element.children[0].style.height=item.height;
+             case 'up_arrow':
+                element.children[0].style.height=item.height;
+             case 'rightdown_arrow':
+                element.children[0].style.width = item.width;
+                element.children[0].style.height = item.height;
+             case 'leftdown_arrow':
+                element.children[0].style.width = item.width;
+                element.children[0].style.height = item.height;
+            }
+                alert("yeaa");
+
+            document.getElementById('form').appendChild(element);
+            }
+          }
+
+        },
+
+
+
+
+
+        fail :function(err){alert("failed to read data...",err);},
+        error : function(error){console.log(error);}
+      });
+
+    }
+
+   function storeUpdateData(json){
+      switch(db_no){
+        case 1:json_data1=json;break;
+        case 2:json_data2=json;break;
+        case 3:json_data3=json;break;
+        case 4:json_data4=json;break;
+        case 5:json_data5=json;break;
+        case 6:json_data6=json;break;
+      }
+    }
+
+  var id;
+  function divOneAccess(e) {
+      var x = document.getElementById("one");
+      x.style.display = "block";
+      console.log(e.target.id)
+      id=e.target.id;
+      document.getElementById("five").style.display="none";
+      document.getElementById("two").style.display="none";
+      document.getElementById("three").style.display="none";
+      document.getElementById("four").style.display="none";
+      document.getElementById('Name_Element').innerHTML=e.target.id;
+  }
+  function divTwoAccess(e) {
+      var x = document.getElementById("two");
+      x.style.display = "block";
+      console.log(e)
+      id=e.target.id;
+      document.getElementById("three").style.display="none";
+      document.getElementById("four").style.display="none";
+      document.getElementById("one").style.display="none";
+      document.getElementById("five").style.display="none";
+      document.getElementById('Element_Name2').innerHTML=e.target.id;
+  }
+  function divFiveAccess(e) {
+      var x = document.getElementById("five");
+      x.style.display = "block";
+      console.log(e);
+      id=e.target.id;
+      document.getElementById("three").style.display="none";
+      document.getElementById("four").style.display="none";
+      document.getElementById("one").style.display="none";
+      document.getElementById("two").style.display="none";
+      document.getElementById('Element_Name3').innerHTML=e.target.id;
+  }
+  function divThreeAccess(e) {
+
+      var x = document.getElementById("three");
+      x.style.display = "block";
+      // console.log(e.target.id);
+      id=e.target.id
+      document.getElementById("five").style.display="none";
+      document.getElementById("two").style.display="none";
+      document.getElementById("one").style.display="none";
+      document.getElementById("four").style.display="none";
+      document.getElementById('Element_Name').innerHTML=e.target.id;
+  }
+
+   function callForForm(e,targetId) {
+     var mode = '{{mode}}'
+     var workflow_id = '{{id}}'
+     if(mode == 'view')
+     {
+       var val = e.target.id
+       window.location = 'http://localhost:5001/api/v1/form/addForm/{{id}}/'+val
+     }
+  }
+
+  function divFourAccess(e) {
+      var x = document.getElementById("four");
+      x.style.display = "block";
+      id=e.target.id;
+      document.getElementById("five").style.display="none";
+      document.getElementById("two").style.display="none";
+      document.getElementById("one").style.display="none";
+      document.getElementById("three").style.display="none";
+      document.getElementById('Element_Name1').innerHTML=e.target.id;
+  }
+  function openLayouts(event){
+        document.getElementById('dropZone1').style.display="block";
+        drop_zone=1;    }
+
+  function editWidth(n){
+    console.log(n);
+    console.log(id);
+    document.getElementById(id).style.width=n +'px';
+      for(var i=0;i!=json.length;i++){
+          if(json[i].node_id==id){
+            json[i]["width"]=n+'px';
+            break;
+          }
+        }
+  }
+  function editHeight(n){
+    console.log(n);
+    console.log(id);
+    document.getElementById(id).style.height=n +'px';
+      for(var i=0;i!=json.length;i++){
+          if(json[i].node_id==id){
+            json[i]["height"]=n+'px';
+            break;
+          }
+        }
+  }
+  function editFlowDirection(n){
+    // console.log(n);
+    // console.log(id);
+   document.getElementById(id).style.number=n +'px';
+      for(var i=0;i!=json.length;i++){
+          if(json[i].node_id==id){
+            json[i]["direction"]=n;
+            break;
+          }
+        } 
+  }
+  function editRadius(n){
+    console.log(n);
+    console.log(id);
+    document.getElementById(id).style.width=n +'px';
+    document.getElementById(id).style.height=n +'px';
+      for(var i=0;i!=json.length;i++){
+          if(json[i].node_id==id){
+            json[i]["width"]=n+'px';
+            json[i]["height"]=n+'px';
+            break;
+          }
+        }
+  }
+  function editValue(n){
+      document.getElementById(id).innerHTML=n;
+      document.getElementById(id).style.textAlign = "center"; 
+      for(var i=0;i!=json.length;i++){
+        if(json[i].node_id==id){
+          json[i]["value"]=n;
+          break;
+         }
+        }
+  }
+
+   function editElementValue(n){
+      alert(document.getElementById(id))
+      var p = document.getElementById(id)
+      p.innerText = p.innerText+n
+      document.getElementById(id).style.textAlign = "center";
+      for(var i=0;i!=json.length;i++){
+        if(json[i].node_id==id){
+          json[i]["value"]=n;
+          break;
+         }
+        }
+  }
+  function editFontSize(n){
+
+    console.log(document.getElementById(id).children[0]);
+    document.getElementById(id).style.fontSize=n +'px';
+      for(var i=0;i!=json.length;i++){
+          if(json[i].node_id==id){
+            json[i]["fontSize"]=n+'px';
+            break;
+          }
+        }
+    }
+    var b;
+    function editWidthSize(n){
+    document.getElementById(id).children[0].style.width=n +'px';
+    // document.getElementById(id).children[0].style.height=c +'px';
+      for(var i=0;i!=json.length;i++){
+          if(json[i].node_id==id){
+            json[i]["width"]=n+'px';
+            break;
+          }
+        } 
+  }
+
+  function editHeightSize(n){
+    // document.getElementById(id).children[0].style.width=b +'px';
+    console.log(n);
+    document.getElementById(id).children[0].style.height=n +'px';
+      for(var i=0;i!=json.length;i++){
+          if(json[i].node_id==id){
+            json[i]["height"]=n+'px';
+            break;
+          }
+        } 
+  }
+  function removeElement(e) {
+        // Removes an element from the document
+        // var element = document.getElementById(id);
+        // console.log(id);
+        // element.parentNode.removeChild(element);{
+          var remove_id=document.getElementById(id);
+          var remove_data=json.filter(function(item){
+            return item.node_id==id;
+          });
+          stack.push({"operation":'delete','id':id,'data':remove_data});
+          json= json.filter(function(item) { 
+              return item.node_id !== id ;  
+          });
+          remove_id.remove();
+    }
+    function addFlowName(n){
+
+      flow_name=n;console.log(n);
+    }
+    function editMarginTop(n){
+      document.getElementById(id).style.marginTop=n +'px';
+      for(var i=0;i!=json.length;i++){
+        if(json[i].node_id==id){
+          json[i]["margin_top"]=n+'px';
+          break;
+        }
+      }
+      console.log(n);
+    }
+    function editMarginRight(n){
+      document.getElementById(id).style.marginRight=n +'px';
+      for(var i=0;i!=json.length;i++){
+        if(json[i].node_id==id){
+          json[i]["margin_right"]=n+'px';
+          break;
+        }
+      }
+      console.log(n);
+    }
+    function editMarginBottom(n){
+      document.getElementById(id).style.marginBottom=n +'px';
+      for(var i=0;i!=json.length;i++){
+        if(json[i].node_id==id){
+          json[i]["margin_bottom"]=n+'px';
+          break;
+        }
+      }
+      console.log(n);
+    }
+    function editMarginLeft(n){
+      document.getElementById(id).style.marginLeft=n +'px';
+      for(var i=0;i!=json.length;i++){
+        if(json[i].node_id==id){
+          json[i]["margin_left"]=n+'px';
+        }
+      }
+      console.log(n);
+    }
+<!--    function editMarginTop(n){-->
+<!--      document.getElementById(id).style.marginTop=n +'px';-->
+<!--      for(var i=0;i!=json.length;i++){-->
+<!--        if(json[i].node_id==id){-->
+<!--          json[i]["margin_top"]=n+'px';-->
+<!--          break;-->
+<!--        }-->
+<!--      } -->
+<!--      console.log(n); -->
+<!--    }-->
+<!--    function editMarginRight(n){-->
+<!--      document.getElementById(id).style.marginRight=n +'px';-->
+<!--      for(var i=0;i!=json.length;i++){-->
+<!--        if(json[i].node_id==id){-->
+<!--          json[i]["margin_right"]=n+'px';-->
+<!--          break;-->
+<!--        }-->
+<!--      } -->
+<!--      console.log(n); -->
+<!--    }-->
+<!--    function editMarginBottom(n){-->
+<!--      document.getElementById(id).style.marginBottom=n +'px';-->
+<!--      for(var i=0;i!=json.length;i++){-->
+<!--        if(json[i].node_id==id){-->
+<!--          json[i]["margin_bottom"]=n+'px';-->
+<!--          break;-->
+<!--        }-->
+<!--      } -->
+<!--      console.log(n);-->
+<!--    }-->
+<!--    function editMarginLeft(n){-->
+<!--      document.getElementById(id).style.marginLeft=n +'px';-->
+<!--      for(var i=0;i!=json.length;i++){-->
+<!--        if(json[i].node_id==id){-->
+<!--          json[i]["margin_left"]=n+'px';-->
+<!--        }-->
+<!--      }-->
+<!--      console.log(n); -->
+<!--    }-->
+<!--    function placeDiv(x_pos, y_pos) {-->
+<!--      var d = document.getElementById('form');-->
+<!--      d.style.position = "absolute";-->
+<!--      d.style.left = x_pos+'px';-->
+<!--      d.style.top = y_pos+'px';-->
+<!--  }-->
+
+
+    </script>
+<script type="text/javascript">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.12.9/js/jsplumb.min.js">
+    alert(working);
+    jsPlumb.editConnectors(n) {
+        anchor
+        alert(func);
+        var firstInstance = jsPlumb.connect();({
+        Connector : [ { curviness: 150 } ],
+        Anchors : [ "TopCenter", "BottomCenter" ]
+        });
+    jsPlumb.connect({
+      source:"_diamond",
+      target:"_rect",
+    });
+}
+
+    </script>
+
+<body>
+
+
+<img src ="/static/images/logo.png" alt="" style="float: left; 10px;"><br><br><br><br>
+<div class="navbar border" style="margin: 0px;">
+
+    <a class="#" href="#">Request</a>
+    <a class="#" href="#">Task</a>
+    <a class="#" href="#">Designer</a>
+    <a class="#" href="#">Admin</a>
+
+    <em style="font-size: 25px; margin-top: 8px;" class="fa rightnav">&nbsp;&nbsp;&nbsp;&#xf2be;</em>
+    <em style="font-size: 25px; margin-top: 8px;" class="fa rightnav">&nbsp;&nbsp;&nbsp;&#xf0f3;</em>
+
+</div><br><br>
+<div class="topnav-border ">&nbsp;&nbsp;
+    <em class="fa fa-home"></em> Directory
+    <button class=" btn btn-secondary rightnav" onclick="prev(event)"><em class="fa fa-floppy-o"></em> Prev</button>
+    <button class=" btn btn-primary rightnav" onclick="save(event)"><em class="fa fa-floppy-o"></em> Save</button>
+    <button class=" btn btn-success rightnav" onclick="flowList()"><em class="fa fa-floppy-o"></em> FlowList</button>
+</div>
+
+<p>
+    <button class="sidenav btn btn-secondary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls=" multiCollapseExample2" style="color:grey;">Flow Elements</button>
+</p>
+<div class="row" >
+    <div class="sidenav djs-palette collapse multi-collapse " role="tabpanel" style="overflow: scroll; ">
+        <ul class="w3-ul w3-card-4" style="width:100%">
+            <button class="dropdown-btn" onclick="openLayouts(event)" id="defaultOpen">
+                <li>  <em class="fa fa-bars" aria-hidden="true"> Layouts</em></li>
+            </button>
+            <div class="dropdown-container selected hover">
+                <li>Flowname:<input style="width:120px;margin-left: 80px;" id="flow_name" onchange="addFlowName(this.value)" value=" "></li>
+                <li><button  id="button" onclick="opendefault(event)" style="width: 150px;background:none;">Default</button></li>
+            </div>
+        </ul>
+        <ul class="w3-ul w3-card-4 " style="width:100%, ">
+            <button class="dropdown-btn">
+                <li><em class="fa fa-cogs" aria-multiselectable="true" data-toggle="collapse" > Flow Elements</em>
+                    <em class="fa fa-angle-down rotate-icon" data-toggle="collapse"></em>
+                </li>
+            </button>
+            <div class=" dropdown-container" style="overflow-x: auto; overflow-y: auto; height: 400px;">
+                <ul>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_circle" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;' title="Create StartEvent">&#9673;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_end" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;' title="Create StopEvent">&#9673;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_diamond" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;' title="Create Gateway">&#9826;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_rrect" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;' title="Create Task">&#9634;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_rect" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;' title="Create Process">&#9645;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_arrow" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;'>&#8594;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_larrow" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;'>&#8592;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_uarrow" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;'>&#8593;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_darrow" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;'>&#8595;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_rdarrow" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;' title="RightDown Arrow">&#8628;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_ldarrow" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;' title="LeftDown Arrow">&#11024;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_text" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;' title="TextArea"> T </span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_vline" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;'>&#124;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_hline" ondragstart="fun(event)" style="height:30px;"><span style='font-size:40px;'>&#8213;</span></div></li>
+                </ul>
+            </div>
+        </ul>
+
+        <ul class="w3-ul w3-card-4" style="width:100%">
+            <button class="dropdown-btn" onclick="">
+                <li>  <em class="fa fa-columns" aria-hidden="true"> SwimLanes</em></li>
+            </button>
+            <div class="dropdown-container" style="height: 100px; overflow:auto;">
+                <ul>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_container" ondragstart="fun(event)" style="height:40px;" title="Vertical SwimLane"><span style='font-size:40px;'>&#9707;</span></div></li>
+                    <li  style="list-style: none;"><div class="draggable" draggable="true" id="_hcontainer" ondragstart="fun(event)" style="height:40px;" title="Horizontal SwimLane"><span style='font-size:40px;'>&#8863;</span></div></li>
+                </ul>
+            </div>
+        </ul>
+
+        <ul class="w3-ul w3-card-4" style="width:100%">
+            <button class="dropdown-btn" onclick="">
+                <li>  <em class="fa fa-bars" aria-hidden="true"> Connectors</em></li>
+            </button>
+            <div class="dropdown-container" style="height: 100px; overflow:scroll;">
+                    <li  style="list-style: none;"><button class="draggable" id="_connectors" onclick="editConnectors" style="height:40px; cursor: default;" title="Connectors"><span style='font-size:40px;'>&#x279A;</span>
+                    </button>
+                    </li>
+            </div>
+        </ul>
+
+
+    </div>
+</div>
+<div class=" btn btn-secondary sidenav-right container-fluid" id="properties" style="right; text-align :right; width:auto;height:auto;" ><h4 style="color: grey;">Properties</h4>
+    <div id="one" style="display:none;">
+        Name:<div style="color:black; font-size:20px;" id='Name_Element'></div>
+        value:<input onchange="editValue(this.value)" type='text' /><br><br>
+        Size:<input onchange="editFontSize(this.value)" type='number' /><br><br>
+
+        <div style="background-color:transparent;border:2px solid silver;width:100px;height:40px;"><em class="fa fa-trash" style="font-size:25px;color:black;padding-left:25px;" onclick="removeElement(event)"></em>
+        </div>
+    </div>
+    <div id="three" style="display:none;">
+        Name:<div style="color:black;font-size:20px;" id='Element_Name'></div>
+        Value:<input onchange="editElementValue(this.value)" type='text' /><br><br>
+        Size:<input onchange="editFontSize(this.value)" type='number' /><br><br>
+
+        <div style="background-color:transparent;border:2px solid silver;width:100px;height:40px;"><em class="fa fa-trash" style="font-size:25px;color:black;padding-left:25px;" onclick="removeElement(event)"></em></div>
+    </div>
+    <div id="four" style="display:none;">
+        Name:<div style="color:black;font-size: 15px;" id='Element_Name1'></div>
+        Value:<input onchange="editElementValue(this.value)" type='text' value=""/><br><br>
+        width:<input onchange="editWidthSize(this.value)" type='number' /><br><br>
+        height:<input onchange="editHeightSize(this.value)" type='number' /><br><br>
+        <div style="background-color:transparent;border:2px solid silver;width:100px;height:40px;"><em class="fa fa-trash" style="font-size:25px;color:black;padding-left:25px;" onclick="removeElement(event)"></em></div>
+    </div>
+    <div id="two" style="display: none; ">
+        Name:<div style="color:black;;font-size: 15px; " id='Element_Name2'></div>
+        width:<input onchange="editWidthSize(this.value)" type='number' /><br><br>
+
+        <div style="background-color:transparent;border:2px solid silver;width:100px;height:40px;"><em class="fa fa-trash" style="font-size:25px;color:black;padding-left:25px;" onclick="removeElement(event)"></em></div>
+    </div>
+    <div id="five" style="display: none;">
+        Name: <div style="color:black;font-size: 15px; " id='Element_Name3'></div>
+        height: <input onchange="editHeightSize(this.value)" type='number' /><br><br>
+
+        <div style="background-color:transparent;border:2px solid silver;width:100px;height:40px;"><em class="fa fa-trash" style="font-size:25px;color:black;padding-left:25px;" onclick="removeElement(event)"></em></div>
+    </div>
+    <div id="connectors" style="display:none;">
+        Name:<div style="color:black;font-size:20px;" id='Element_Name4'></div>
+        Source: <input onchange="editConnectors(this.value)" type='number' /><br><br>
+        Target: <input onchange="editConnectors(this.value)" type='number' /><br><br>
+
+        <div style="background-color:transparent;border:2px solid silver;width:100px;height:40px;"><em class="fa fa-trash" style="font-size:25px;color:black;padding-left:25px;" onclick="removeElement(event)"></em>
+        </div>
+    </div>
+</div>
+
+<div id="dropZone1" ondrop="drop(event)" ondragover="allowDrop(event)" style="padding:2px; position:sticky;overflow:scroll; width:1040px;height:750px"> </div>
+
+<div style="display: none;" id='form' ></div>
+<div id="op_fields" style="display: none;">
+    <div class="resize-container">
+        <div class="resize-drag1" id="dot_input" onclick="divThreeAccess(event)" style="color:black;font-size: 40px;height: auto;width:auto;border: 1px solid transparent;">&#9679;</div>
+    </div>
+    <div class="resize-container">
+        <div class="resize-drag1" id="end_input" onclick="divThreeAccess(event)" style="height: auto;width:auto;border: 1px solid transparent;font-size: 40px;">&#9673;
+        </div>
+    </div>
+    <div class="resize-container">
+        <div class="resize-drag1"  id="arrow_input"  onclick="divTwoAccess(event)" style="height: 20px;width:auto;border: 1px solid transparent;">
+            <div class="rar" style="display: block;">
+            </div>
+        </div>
+    </div>
+    <div class="resize-container">
+        <div class="resize-drag1" id="darrow_input" onclick="divFiveAccess(event)" style="height: auto;width:50px;border: 1px solid transparent;text-align: center;">
+            <div class="dar" style="display: block;">
+            </div>
+        </div>
+    </div>
+    <div class="resize-container">
+        <div class="resize-drag1" id="larrow_input" onclick="divTwoAccess(event)" style="height: 40px;width:auto;border: 1px solid transparent;">
+            <div class="lar" style="display: block;"></div>
+        </div>
+    </div>
+    <div class="resize-container">
+        <div class="resize-drag1" id="uarrow_input" onclick="divFiveAccess(event)" style="height: auto;width:50px;border: 1px solid transparent;text-align: center;">
+            <div class="uar" style="display: block;">
+            </div>
+        </div>
+    </div>
+    <div class="resize-container">
+        <div class="resize-drag1" id="rdarrow_input" onclick="divFiveAccess(event)" style="height: auto;width:50px;border: 1px solid transparent;text-align: center;">
+            <div class="rdar" style="display: block;"></div>
+        </div>
+    </div>
+    <div class="resize-container">
+        <div class="resize-drag1" id="ldarrow_input" onclick="divFiveAccess(event)" style="height: auto;width:50px;border: 1px solid transparent;text-align: center;">
+            <div class="ldar" style="display: block;"></div>
+        </div>
+    </div>
+    <div class="resize-container">
+        <div class="resize-drag1"  id="rect_input"  onclick="divFourAccess(event)" placeholder="Process" style="height:auto;width:auto;border:1px solid black;">
+            <div class="rect" style="width:45px;height:15px;display:inline-block;">
+                <input onchange="editElementValue(this.value)" type='text' /><br><br>
+            </div>
+        </div>
+        <div class="resize-container">
+            <div class="resize-drag1" id="container_input" onclick="divFourAccess(event)" style="height:auto;width:auto;border:">
+                <div class="container" style="border:1px solid black; width:165px;height:400px;display: inline-block; margin-top:50px;">
+                    <hr class="hr draggable" style="margin-top:50px;"/></div>
+            </div>
+        </div>
+        <div class="resize-container">
+            <div class="resize-drag1" id="hcontainer_input" onclick="divFourAccess(event)" style="height:auto;width:auto;border:1px solid transparent;">
+                <div class="hcontainer" style="border: 1px solid black; width:400px;height:165px;display: inline-block;">
+                    <!--suppress HtmlUnknownTag -->
+                    <dash  class="dash draggable" style="height:165px; width:auto; margin-right:270px"></dash>
+                </div>
+            </div>
+        </div>
+        <div class="resize-container">
+            <div class="resize-drag1"  id="rrect_input"  onclick="divFourAccess(event)" placeholder="Process" style="height:auto;width:auto;border:1px solid black;">
+                <div class="rrect" style="width:45px;height:15px;display: inline-block;">
+                    <input onchange="editElementValue(this.value)" type='text' style="width: auto; height :auto;" /><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="resize-container">
+            <div class="resize-drag1" id="text_input" onclick="divOneAccess(event)" style="height: auto;width:auto;border: 1px solid transparent;">Enter text here
+            </div>
+        </div>
+        <div class="resize-container">
+            <div class="resize-drag1" id="diamond_input" onclick="divThreeAccess(event)" style="height:auto;width:auto;border: 1px solid transparent;font-size: 40px;">&#9826;
+            </div>
+        </div>
+        <div class="resize-container">
+            <div class="resize-drag1" id="vline_input" onclick="divFourAccess(event)" style="height: auto;width:auto;border: 1px solid transparent;">
+                <div class="vl" style="height:45px;display: inline-block;"></div>
+            </div>
+        </div>
+        <div class="resize-container">
+            <div class="resize-drag1" id="hline_input" onclick="divFourAccess(event)" style="height: 5px;width:auto;border: 1px solid transparent;text-align: center;">
+                <div class="hl" style="width:45px;display: block;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form_op_fields_class" style="display: none;">
+    <div class="form_op_fields_class_elements"  id="form_circle" style="width:25px;height: 25px;color:black;">
+        &#9679;
+    </div>
+
+    <div id='form_end' class="form_op_fields_class_elements" style="width:25px;height: 25px;color:black;">
+        &#9673;
+    </div>
+
+    <div id='form_arrow' class="form_op_fields_class_elements"  style="color:black;">
+        <div class="rar"></div>
+    </div>
+
+    <div id='form_darrow' class="form_op_fields_class_elements"   style="color:black;">
+        <div class="dar"></div>
+    </div>
+
+    <div id='form_larrow' class="form_op_fields_class_elements" style="color:black;">
+        <div class="lar"></div>
+    </div>
+
+    <div id='form_uarrow' class="form_op_fields_class_elements"   style="color:black;">
+        <div class="uar"></div>
+    </div>
+
+    <div id='form_rdarrow' class="form_op_fields_class_elements" style="color:black;">
+        <div class="rdar"></div>
+    </div>
+
+    <div id='form_ldarrow' class="form_op_fields_class_elements" style="color:black;">
+        <div class="ldar"></div>
+    </div>
+
+    <div id='form_rect' class="form_op_fields_class_elements" onclick="callForForm(event,'form_rect')" style="width:25px;height: 25px;color:black;">
+        <div class="rectangle" > <input type="hidden" id="form_rect_hdn" value=""/></div>
+    </div>
+
+    <div id='form_text' class="form_op_fields_class_elements" style="width:25px;height: 25px;color:black;">
+        T
+    </div>
+
+
+    <div id='form_rrect' class="form_op_fields_class_elements" style="width:25px;height: 25px;color:black;">
+        <div class="rrect"></div>
+    </div>
+
+    <div id='form_container' class="form_op_fields_class_elements" style="width:25px;height: 25px;">
+        <div class="container"></div>
+    </div>
+    <div id='form_hcontainer' class="form_op_fields_class_elements" style="width:25px;height: 25px;color:black;">
+        <div class="hcontainer"></div>
+    </div>
+    <div id='form_diamond' class="form_op_fields_class_elements" style="width:25px;height: 25px;color:black;">
+        &#9826;
+    </div>
+    <div id='form_vline' class="form_op_fields_class_elements" style="height: 45px;color:black;">
+        <div class="vl"></div>
+    </div>
+    <div id='form_hline' class="form_op_fields_class_elements" style="width: 45px;color:black;">
+        <div class="hl"></div>
+    </div>
+    <div id='form_connectors' class="form_op_fields_class_elements" style="width: 45px;color:black;">
+        <div class="connectors"></div>
+    </div>
+</div>
+</body>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+
+
+
