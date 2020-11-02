@@ -11,40 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="210bebf3-99da-496f-83c8-3e97974d5c90" name="Default Changelist" comment="UI changes">
-      <change afterPath="$PROJECT_DIR$/.idea/FlowBuilderFlask.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ramer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/ddb045a365252e130f91a617746ecbf4204ab920" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask.psql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/alembic.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flowt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/NodeModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/WorkflowModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/connect.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/data.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/flowt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/mainui.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/workflowList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/xml.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/xmljs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Flow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/WorkflowView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flowt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flowt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/mainui.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/mainui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/workflowList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/workflowList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +46,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/templates/base.html" />
   </component>
   <component name="RecentsManager">
@@ -109,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604308456517</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="UI changes">
+      <created>1604309026103</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604309026103</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +115,10 @@
       <screen x="0" y="28" width="1440" height="834" />
     </state>
     <state x="425" y="312" width="580" height="273" key="#Project_Settings/0.28.1440.834@0.28.1440.834" timestamp="1604042504343" />
+    <state x="178" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604309856033">
+      <screen x="0" y="28" width="1440" height="834" />
+    </state>
+    <state x="178" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1440.834@0.28.1440.834" timestamp="1604309856033" />
     <state x="300" y="244" width="830" height="409" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604308533318">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
@@ -146,18 +127,22 @@
       <screen x="0" y="28" width="1440" height="834" />
     </state>
     <state x="272" y="28" width="886" height="834" key="CommitChangelistDialog2/0.28.1440.834@0.28.1440.834" timestamp="1604051980630" />
-    <state x="503" y="203" width="434" height="491" key="FileChooserDialogImpl" timestamp="1604298554784">
+    <state x="503" y="203" width="434" height="498" key="FileChooserDialogImpl" timestamp="1604310063808">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
-    <state x="503" y="203" width="434" height="491" key="FileChooserDialogImpl/0.28.1440.834@0.28.1440.834" timestamp="1604298554784" />
-    <state x="216" y="80" width="1007" height="737" key="SettingsEditor" timestamp="1604308711800">
+    <state x="503" y="203" width="434" height="498" key="FileChooserDialogImpl/0.28.1440.834@0.28.1440.834" timestamp="1604310063808" />
+    <state x="216" y="80" width="1007" height="737" key="SettingsEditor" timestamp="1604317244197">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
-    <state x="216" y="80" width="1007" height="737" key="SettingsEditor/0.28.1440.834@0.28.1440.834" timestamp="1604308711800" />
-    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604296850563">
+    <state x="216" y="80" width="1007" height="737" key="SettingsEditor/0.28.1440.834@0.28.1440.834" timestamp="1604317244197" />
+    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604309070548">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
-    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.834@0.28.1440.834" timestamp="1604296850563" />
+    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.834@0.28.1440.834" timestamp="1604309070548" />
+    <state x="100" y="128" width="1240" height="634" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604310129887">
+      <screen x="0" y="28" width="1440" height="834" />
+    </state>
+    <state x="100" y="128" width="1240" height="634" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1440.834@0.28.1440.834" timestamp="1604310129887" />
     <state x="530" y="262" width="407" height="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604300643393">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
