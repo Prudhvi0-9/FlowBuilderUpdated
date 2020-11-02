@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Hello World</title>
+
+    <!-- required modeler styles -->
+    <link rel="stylesheet" href="https://unpkg.com/bpmn-js@6.3.0/dist/assets/diagram-js.css">
+    <link rel="stylesheet" href="https://unpkg.com/bpmn-js@6.3.0/dist/assets/bpmn-font/css/bpmn.css">
+
+    <!-- modeler distro -->
+    <script src="https://unpkg.com/bpmn-js@6.3.0/dist/bpmn-modeler.development.js"></script>
+
+    <!-- needed for this example only -->
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <script type="text/javascript" src="https://goessner.net/download/prj/jsonxml/xml2json.js"></script>
+    <script src="https://unpkg.com/x2js@3.2.3/x2js.js"></script>
+
+    <!-- example styles -->
+    <style>
+      html, body, #canvas {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .diagram-note {
+        background-color: rgba(66, 180, 21, 0.7);
+        color: White;
+        border-radius: 5px;
+        font-family: Arial;
+        font-size: 12px;
+        padding: 5px;
+        min-height: 16px;
+        width: 50px;
+        text-align: center;
+      }
+
+      .needs-discussion:not(.djs-connection) .djs-visual > :nth-child(1) {
+        stroke: rgba(66, 180, 21, 0.7) !important; /* color elements as red */
+      }
+
+      #save-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+      }
+    </style>
+</head>
+<body class="">
+<div id="canvas">
+<div class="bjs-container" style="width: 100%; height: 100%; position: relative;">
+    <a href="http://bpmn.io" class="bjs-powered-by" title="Powered by bpmn.io" style="position: absolute; bottom: 15px; right: 15px; z-index: 100">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20960%20960%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M960%2060v839c0%2033-27%2061-60%2061H60c-33%200-60-27-60-60V60C0%2027%2027%200%2060%200h839c34%200%2061%2027%2061%2060z%22%2F%3E%3Cpath%20fill%3D%22%2352b415%22%20d%3D%22M217%20548a205%20205%200%200%200-144%2058%20202%20202%200%200%200-4%20286%20202%20202%200%200%200%20285%203%20200%20200%200%200%200%2048-219%20203%20203%200%200%200-185-128zM752%206a206%20206%200%200%200-192%20285%20206%20206%200%200%200%20269%20111%20207%20207%200%200%200%20111-260A204%20204%200%200%200%20752%206zM62%200A62%2062%200%200%200%200%2062v398l60%2046a259%20259%200%200%201%2089-36c5-28%2010-57%2014-85l99%202%2012%2085a246%20246%200%200%201%2088%2038l70-52%2069%2071-52%2068c17%2030%2029%2058%2035%2090l86%2014-2%20100-86%2012a240%20240%200%200%201-38%2089l43%2058h413c37%200%2060-27%2060-61V407a220%20220%200%200%201-44%2040l21%2085-93%2039-45-76a258%20258%200%200%201-98%201l-45%2076-94-39%2022-85a298%20298%200%200%201-70-69l-86%2022-38-94%2076-45a258%20258%200%200%201-1-98l-76-45%2040-94%2085%2022a271%20271%200%200%201%2041-47z%22%2F%3E%3C%2Fsvg%3E" width="52" height="52" alt=""></a>
+    <div class="djs-container" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+    <div class="djs-tooltip-container" style="position: absolute; width: 0px; height: 0px; transform: matrix(1, 0, 0, 1, -10, -87);">
+
+    </div>
+    <div class="djs-overlay-container" style="position: absolute; width: 0px; height: 0px; transform-origin: left top 0px; transform: matrix(1, 0, 0, 1, -10, -87);">
+        <div class="djs-overlays needs-discussion" style="position: absolute; left: 585px; top: 185px;" data-container-id="SCAN_OK">
+            <div class="djs-overlay djs-overlay-note" data-overlay-id="ov-719345683-1" style="position: absolute; left: 50px; top: 50px; transform-origin: left top 0px;">
+                <div class="diagram-note">Mixed up the labels?</div>
+            </div>
+        </div>
+    </div>
+
+        <svg width="100%" height="100%" style="touch-action: none; -moz-user-select: none;" data-element-id="sid-c0e745ff-361e-4afb-8c8d-2a1fc32b1424" class="">
+
+            <g class="viewport" transform="matrix(1, 0, 0, 1, -10, -87)">
+                <g class="layer-base" data-element-id="sid-c0e745ff-361e-4afb-8c8d-2a1fc32b1424">
+                    <g class="djs-group">
+                        <g class="djs-element djs-shape" data-element-id="sid-87F4C1D6-25E1-4A45-9DA7-AD945993D06F" transform="matrix(1, 0, 0, 1, 83, 105)" style="display: block;">
+                            <g class="djs-visual">
+                    <rect x="0" y="0" width="933" height="250" rx="0" ry="0" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"></rect>
+                    <polyline points="30,0 30,250 " style="fill: none; stroke: black; stroke-width: 2px;"></polyline>
+                    <text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label" transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 250)">
+                        <tspan x="98.5" y="18.6">Customer</tspan>
+                    </text>
+                            </g>
+                            <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-click-stroke" x="0" y="0" width="933" height="250"></rect><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="30" height="250"></rect>
+                <rect x="-6" y="-6" width="945" height="262" style="fill: none;" class="djs-outline"></rect>
+            </g>
+
+                        <g class="djs-children">
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-57E4FE0D-18E4-478D-BC5D-B15164E93254" transform="matrix(1, 0, 0, 1, 113, 105)" style="display: block;">
+                        <g class="djs-visual">
+                            <rect x="0" y="0" width="903" height="250" rx="0" ry="0" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.35;">
+                            </rect>
+                            <text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label" transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 250)">
+                                <tspan x="125" y="18.6"></tspan>
+                            </text>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-click-stroke" x="0" y="0" width="903" height="250"></rect>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="30" height="250"></rect><rect x="-6" y="-6" width="915" height="262" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+
+                <g class="djs-group">
+                    <g class="djs-element djs-connection" data-element-id="sid-7B791A11-2F2E-4D80-AFB3-91A02CF2B4FD" style="display: block;">
+                        <g class="djs-visual">
+                            <path d="m  223,210L275,210 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url(&quot;#sequenceflow-end-white-black-drq417o3hom0rvpt3ve4q5yrd&quot;);"></path>
+                        </g>
+                        <polyline points="223,210 275,210 " style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"></polyline>
+                        <rect x="217" y="204" width="64" height="12" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+
+                <g class="djs-group">
+                    <g class="djs-element djs-connection" data-element-id="sid-EE8A7BA0-5D66-4F8B-80E3-CC2751B3856A" style="display: block;">
+                        <g class="djs-visual">
+                            <path d="m  493,210L585,210 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url(&quot;#sequenceflow-end-white-black-drq417o3hom0rvpt3ve4q5yrd&quot;);"></path>
+                        </g>
+                        <polyline points="493,210 585,210 " style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"></polyline>
+                        <rect x="487" y="204" width="104" height="12" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+
+                <g class="djs-group">
+                    <g class="djs-element djs-connection" data-element-id="sid-57EB1F24-BD94-479A-BF1F-57F1EAA19C6C" style="display: block;">
+                        <g class="djs-visual">
+                            <path d="m  828,210L901,210 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url(&quot;#sequenceflow-end-white-black-drq417o3hom0rvpt3ve4q5yrd&quot;);"></path>
+                        </g>
+                        <polyline points="828,210 901,210 " style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"></polyline>
+                        <rect x="822" y="204" width="85" height="12" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+
+                <g class="djs-group">
+                    <g class="djs-element djs-connection" data-element-id="sid-8B820AF5-DC5C-4618-B854-E08B71FB55CB" style="display: block;">
+                        <g class="djs-visual">
+                            <path d="m  635,210L728,210 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url(&quot;#sequenceflow-end-white-black-drq417o3hom0rvpt3ve4q5yrd&quot;);"></path>
+                        </g>
+                        <polyline points="635,210 728,210 " style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"></polyline>
+                        <rect x="629" y="204" width="105" height="12" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-connection" data-element-id="sid-4DC479E5-5C20-4948-BCFC-9EC5E2F66D8D" style="display: block;">
+                        <g class="djs-visual">
+                            <path d="m  325,210L393,210 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url(&quot;#sequenceflow-end-white-black-drq417o3hom0rvpt3ve4q5yrd&quot;);"></path>
+                        </g>
+                        <polyline points="325,210 393,210 " style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"></polyline>
+                        <rect x="319" y="204" width="80" height="12" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-connection" data-element-id="sid-337A23B9-A923-4CCE-B613-3E247B773CCE" style="display: block;">
+                        <g class="djs-visual">
+                            <path d="m  611,234L610.5,299 L300.5,299 L301,234 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url(&quot;#sequenceflow-end-white-black-drq417o3hom0rvpt3ve4q5yrd&quot;);"></path>
+                        </g>
+                        <polyline points="611,234 610.5,299 300.5,299 301,234 " style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"></polyline>
+                        <rect x="294.5" y="228" width="322.5" height="77" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-52EB1772-F36E-433E-8F5B-D5DFD26E6F26" transform="matrix(1, 0, 0, 1, 393, 170)" style="display: block;">
+                        <g class="djs-visual">
+                            <rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"></rect>
+                            <text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label">
+                                <tspan x="10.5" y="43.599999999999994">Scan QR code</tspan>
+                            </text>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"></rect>
+                        <rect x="-6" y="-6" width="112" height="92" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-E49425CF-8287-4798-B622-D2A7D78EF00B" transform="matrix(1, 0, 0, 1, 728, 170)" style="display: block;">
+                        <g class="djs-visual">
+                            <rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"></rect>
+                            <text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label">
+                                <tspan x="13" y="29.200000000000003">Open product </tspan>
+                                <tspan x="13" y="43.6">information in </tspan>
+                                <tspan x="19.5" y="58">mobile  app</tspan>
+                            </text>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"></rect>
+                        <rect x="-6" y="-6" width="112" height="92" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-D7F237E8-56D0-4283-A3CE-4F0EFE446138" transform="matrix(1, 0, 0, 1, 187, 192)" style="display: block;">
+                        <g class="djs-visual">
+                            <circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"></circle>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36"></rect>
+                        <rect x="-6" y="-6" width="48" height="48" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-D7F237E8-56D0-4283-A3CE-4F0EFE446138_label" transform="matrix(1, 0, 0, 1, 183, 229)" style="display: block;">
+                        <g class="djs-visual">
+                            <text style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label">
+                                <tspan x="3.5" y="9.899999999999999">Notices</tspan>
+                                <tspan x="0" y="23.099999999999998">QR code</tspan>
+                            </text>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="44" height="27"></rect>
+                        <rect x="-6" y="-6" width="56" height="39" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-E433566C-2289-4BEB-A19C-1697048900D2" transform="matrix(1, 0, 0, 1, 901, 192)" style="display: block;">
+                        <g class="djs-visual">
+                            <circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 4px; fill: white; fill-opacity: 0.95;"></circle>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36"></rect>
+                        <rect x="-6" y="-6" width="48" height="48" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-E433566C-2289-4BEB-A19C-1697048900D2_label" transform="matrix(1, 0, 0, 1, 893, 231)" style="display: block;">
+                        <g class="djs-visual">
+                            <text style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label">
+                                <tspan x="0" y="9.899999999999999">Is informed</tspan>
+                            </text>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="54" height="14"></rect>
+                        <rect x="-6" y="-6" width="66" height="26" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-5134932A-1863-4FFA-BB3C-A4B4078B11A9" transform="matrix(1, 0, 0, 1, 275, 185)" style="display: block;">
+                        <g class="djs-visual">
+                            <polygon points="25,0 50,25 25,50 0,25" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"></polygon>
+                            <path d="m 16,15 7.42857142857143,9.714285714285715 -7.42857142857143,9.714285714285715 3.428571428571429,0 5.714285714285715,-7.464228571428572 5.714285714285715,7.464228571428572 3.428571428571429,0 -7.42857142857143,-9.714285714285715 7.42857142857143,-9.714285714285715 -3.428571428571429,0 -5.714285714285715,7.464228571428572 -5.714285714285715,-7.464228571428572 -3.428571428571429,0 z" style="fill: black; stroke-width: 1px; stroke: black;"></path>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"></rect>
+                        <rect x="-6" y="-6" width="62" height="62" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape needs-discussion" data-element-id="SCAN_OK" transform="matrix(1, 0, 0, 1, 585, 185)" style="display: block;">
+                        <g class="djs-visual">
+                            <polygon points="25,0 50,25 25,50 0,25" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"></polygon>
+                            <path d="m 16,15 7.42857142857143,9.714285714285715 -7.42857142857143,9.714285714285715 3.428571428571429,0 5.714285714285715,-7.464228571428572 5.714285714285715,7.464228571428572 3.428571428571429,0 -7.42857142857143,-9.714285714285715 7.42857142857143,-9.714285714285715 -3.428571428571429,0 -5.714285714285715,7.464228571428572 -5.714285714285715,-7.464228571428572 -3.428571428571429,0 z" style="fill: black; stroke-width: 1px; stroke: black;"></path>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"></rect>
+                        <rect x="-6" y="-6" width="62" height="62" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="SCAN_OK_label" transform="matrix(1, 0, 0, 1, 569, 157)" style="display: block;">
+                        <g class="djs-visual">
+                            <text style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label">
+                                <tspan x="0" y="9.899999999999999">Scan successful?</tspan>
+                                <tspan x="43.5" y="23.099999999999998"></tspan>
+                            </text>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="87" height="27"></rect>
+                        <rect x="-6" y="-6" width="99" height="39" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-337A23B9-A923-4CCE-B613-3E247B773CCE_label" transform="matrix(1, 0, 0, 1, 587, 236)" style="display: block;">
+                        <g class="djs-visual">
+                            <text style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label">
+                                <tspan x="0" y="9.899999999999999">Yes</tspan>
+                            </text>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="18" height="14"></rect>
+                        <rect x="-6" y="-6" width="30" height="26" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+                <g class="djs-group">
+                    <g class="djs-element djs-shape" data-element-id="sid-8B820AF5-DC5C-4618-B854-E08B71FB55CB_label" transform="matrix(1, 0, 0, 1, 643, 185)" style="display: block;">
+                        <g class="djs-visual">
+                            <text style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: black;" lineHeight="1.2" class="djs-label">
+                                <tspan x="0" y="9.899999999999999">No</tspan>
+                            </text>
+                        </g>
+                        <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="14" height="14"></rect>
+                        <rect x="-6" y="-6" width="26" height="26" style="fill: none;" class="djs-outline"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+        </g>
+        <g class="layer-resizers"></g>
+        <g class="layer-overlays">
+            <g data-element-id="sid-7B791A11-2F2E-4D80-AFB3-91A02CF2B4FD" class="djs-bendpoints">
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 223, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 275, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint floating" transform="matrix(1, 0, 0, 1, 238, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-segment-dragger horizontal" transform="matrix(1, 0, 0, 1, 249, 210)" data-segment-idx="1">
+                    <g transform="matrix(1, 0, 0, 1, 0, 0)">
+                        <rect x="-7" y="-1.5" width="14" height="3" class="djs-visual" transform="matrix(1, 0, 0, 1, -11, 0)"></rect>
+                        <rect x="-17.5" y="-4.5" width="35" height="9" class="djs-hit"></rect>
+                    </g>
+                </g>
+            </g>
+            <g data-element-id="sid-337A23B9-A923-4CCE-B613-3E247B773CCE" class="djs-bendpoints">
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 611, 234)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 610.5, 299)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 300.5, 299)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 301, 234)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint floating" transform="matrix(1, 0, 0, 1, 356, 299)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-segment-dragger vertical" transform="matrix(1, 0, 0, 1, 611, 267)" data-segment-idx="1">
+                    <g transform="matrix(6.12323e-17, 1, -1, 6.12323e-17, 0, 0)">
+                        <rect x="-7" y="-1.5" width="14" height="3" class="djs-visual"></rect>
+                        <rect x="-21.5" y="-4.5" width="43" height="9" class="djs-hit"></rect>
+                    </g>
+                </g>
+                <g class="djs-segment-dragger horizontal" transform="matrix(1, 0, 0, 1, 456, 299)" data-segment-idx="2">
+                    <g transform="matrix(1, 0, 0, 1, 0, 0)">
+                        <rect x="-7" y="-1.5" width="14" height="3" class="djs-visual" transform="matrix(1, 0, 0, 1, -100, 0)"></rect>
+                        <rect x="-103.5" y="-4.5" width="207" height="9" class="djs-hit"></rect>
+                    </g>
+                </g>
+                <g class="djs-segment-dragger vertical" transform="matrix(1, 0, 0, 1, 301, 267)" data-segment-idx="3">
+                    <g transform="matrix(6.12323e-17, 1, -1, 6.12323e-17, 0, 0)">
+                        <rect x="-7" y="-1.5" width="14" height="3" class="djs-visual" transform="matrix(1, 0, 0, 1, -20, 0)"></rect>
+                        <rect x="-21.5" y="-4.5" width="43" height="9" class="djs-hit"></rect>
+                    </g>
+                </g>
+            </g>
+            <g data-element-id="sid-4DC479E5-5C20-4948-BCFC-9EC5E2F66D8D" class="djs-bendpoints">
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 325, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 393, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint floating" transform="matrix(1, 0, 0, 1, 374, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-segment-dragger horizontal" transform="matrix(1, 0, 0, 1, 359, 210)" data-segment-idx="1">
+                    <g transform="matrix(1, 0, 0, 1, 0, 0)">
+                        <rect x="-7" y="-1.5" width="14" height="3" class="djs-visual" transform="matrix(1, 0, 0, 1, 15, 0)"></rect>
+                        <rect x="-22.5" y="-4.5" width="45" height="9" class="djs-hit"></rect>
+                    </g>
+                </g>
+            </g>
+            <g data-element-id="sid-57EB1F24-BD94-479A-BF1F-57F1EAA19C6C" class="djs-bendpoints">
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 828, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint" transform="matrix(1, 0, 0, 1, 901, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-bendpoint floating" transform="matrix(1, 0, 0, 1, 845, 210)">
+                    <circle cx="0" cy="0" r="4" class="djs-visual"></circle>
+                    <circle cx="0" cy="0" r="10" class="djs-hit"></circle>
+                </g>
+                <g class="djs-segment-dragger horizontal" transform="matrix(1, 0, 0, 1, 865, 210)" data-segment-idx="1">
+                    <g transform="matrix(1, 0, 0, 1, 0, 0)">
+                        <rect x="-7" y="-1.5" width="14" height="3" class="djs-visual" transform="matrix(1, 0, 0, 1, -20, 0)"></rect>
+                        <rect x="-24.5" y="-4.5" width="49" height="9" class="djs-hit"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <rect x="-10000" y="10000" width="10" height="10" style="fill: none;" class="outer-bound-marker"></rect>
+    <rect x="10000" y="10000" width="10" height="10" style="fill: none;" class="outer-bound-marker"></rect>
+    <defs>
+        <marker id="sequenceflow-end-white-black-drq417o3hom0rvpt3ve4q5yrd" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+            <path d="M 1 5 L 11 10 L 1 15 Z" style="fill: black; stroke-width: 1px; stroke-linecap: round; stroke-dasharray: 10000px, 1px; stroke: black;"></path>
+        </marker>
+    </defs>
+</svg>
+    <div class="djs-search-container djs-draggable djs-scrollable">
+        <div class="djs-search-input"><input type="text"></div>
+        <div class="djs-search-results"></div>
+    </div>
+    <div class="djs-palette two-column open" style="touch-action: none; -moz-user-select: none;">
+        <div class="djs-palette-entries"><div class="group" data-group="tools">
+            <div class="entry bpmn-icon-hand-tool" draggable="true" data-action="hand-tool" title="Activate the hand tool"></div>
+            <div class="entry bpmn-icon-lasso-tool" draggable="true" data-action="lasso-tool" title="Activate the lasso tool"></div>
+            <div class="entry bpmn-icon-space-tool" draggable="true" data-action="space-tool" title="Activate the create/remove space tool"></div>
+            <div class="entry bpmn-icon-connection-multi" draggable="true" data-action="global-connect-tool" title="Activate the global connect tool"></div>
+            <hr class="separator">
+        </div>
+            <div class="group" data-group="event">
+                <div class="entry bpmn-icon-start-event-none" draggable="true" data-action="create.start-event" title="Create StartEvent"></div>
+                <div class="entry bpmn-icon-intermediate-event-none" draggable="true" data-action="create.intermediate-event" title="Create Intermediate/Boundary Event"></div>
+                <div class="entry bpmn-icon-end-event-none" draggable="true" data-action="create.end-event" title="Create EndEvent"></div>
+            </div>
+            <div class="group" data-group="gateway">
+                <div class="entry bpmn-icon-gateway-none" draggable="true" data-action="create.exclusive-gateway" title="Create Gateway"></div>
+            </div>
+            <div class="group" data-group="activity">
+                <div class="entry bpmn-icon-task" draggable="true" data-action="create.task" title="Create Task"></div>
+                <div class="entry bpmn-icon-subprocess-expanded" draggable="true" data-action="create.subprocess-expanded" title="Create expanded SubProcess"></div>
+            </div>
+            <div class="group" data-group="data-object">
+                <div class="entry bpmn-icon-data-object" draggable="true" data-action="create.data-object" title="Create DataObjectReference"></div>
+            </div>
+            <div class="group" data-group="data-store">
+                <div class="entry bpmn-icon-data-store" draggable="true" data-action="create.data-store" title="Create DataStoreReference"></div>
+            </div>
+            <div class="group" data-group="collaboration">
+                <div class="entry bpmn-icon-participant" draggable="true" data-action="create.participant-expanded" title="Create Pool/Participant"></div>
+            </div>
+            <div class="group" data-group="artifact">
+                <div class="entry bpmn-icon-group" draggable="true" data-action="create.group" title="Create Group"></div>
+            </div>
+        </div>
+        <div class="djs-palette-toggle"></div>
+    </div>
+</div>
+</div>
+</div>
+<input type="hidden" id="naaConsole">
+<button id="save-button">print to console</button>
+<script>
+
+      var diagramUrl = 'https://cdn.staticaly.com/gh/bpmn-io/bpmn-js-examples/dfceecba/starter/diagram.bpmn';
+
+      // modeler instance
+      var bpmnModeler = new BpmnJS({
+        container: '#canvas',
+        keyboard: {
+          bindTo: window
+        }
+      });
+
+    function exportDiagram() {
+
+        bpmnModeler.saveXML({ format: true },function(err, xml) {
+<!--              $("#naaConsole").val(xml);-->
+               alert("hii");
+<!--alert('erw');-->
+<!--             var blob = new Blob(["test text"], {type: "text/plain;charset=utf-8"});-->
+<!--             alert("hello");-->
+<!--  saveAs(blob, "/home/ramer/Documents/FlowBuilderFlask2602/Text.txt");-->
+<!--  var f = "Text.txt";-->
+<!---->
+<!--writeTextFile(f, xml)-->
+<!--function writeTextFile(afilename, output)-->
+<!--{-->
+<!--  var txtFile =new File(afilename);-->
+<!--  txtFile.writeln(output);-->
+<!--  txtFile.close();-->
+<!--}-->
+
+<!--function download(filename, text) {-->
+<!--    var element = document.createElement('a');-->
+<!--    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));-->
+<!--    element.setAttribute('download', filename);-->
+<!---->
+<!--    element.style.display = 'none';-->
+<!--    document.body.appendChild(element);-->
+<!---->
+<!--    element.click();-->
+<!---->
+<!--    document.body.removeChild(element);-->
+<!--}-->
+<!---->
+<!--// Start file download.-->
+<!--document.getElementById("dwn-btn").addEventListener("click", function(){-->
+<!--    // Generate download of hello.txt file with some content-->
+<!--    var text = document.getElementById("text-val").value;-->
+<!--    var filename = "hello.txt";-->
+<!---->
+<!--    download(filename, text);-->
+<!--}, false);-->
+
+<!--  alert("bye");-->
+
+<!--           var x2js = new window.X2JS();-->
+<!--var parser = require('xml2json');-->
+<!--           alert("hello");-->
+<!--           var fso = new ActiveXObject("Scripting.FileSystemObject");-->
+<!--var s = fso.CreateTextFile("Test.txt", true);-->
+<!--s.WriteLine(xml);-->
+<!--s.Close();-->
+<!--console.save(xml,'Text.txt');-->
+<!--           ab=JSON.stringify(xml2json(xml))-->
+<!--           console.log(ab);-->
+<!--          console.log('RMR DIAGRAM',xml);-->
+<!--alert(xml);-->
+<!--console.save(xml,[Text.txt]);-->
+       });
+
+      }
+
+      function openDiagram(bpmnXML) {
+
+        // import diagram
+        bpmnModeler.importXML(bpmnXML, function(err) {
+
+          if (err) {
+            return console.error('could not import BPMN 2.0 diagram', err);
+          }
+
+          // access modeler components
+          var canvas = bpmnModeler.get('canvas');
+          var overlays = bpmnModeler.get('overlays');
+
+
+          // zoom to fit full viewport
+          canvas.zoom('fit-viewport');
+
+          // attach an overlay to a node
+          overlays.add('SCAN_OK', 'note', {
+            position: {
+              bottom: 0,
+              right: 0
+            },
+            html: '<div class="diagram-note">Mixed up the labels?</div>'
+          });
+
+          // add marker
+          canvas.addMarker('SCAN_OK', 'needs-discussion');
+        });
+      }
+<!--      with open('jsondata.json', 'w') as out_file:-->
+<!--          json.dump(xmltodict.parse(xml), out_file)-->
+
+      // load external diagram file via AJAX and open it
+      $.get(diagramUrl, openDiagram,xml2json, 'text');
+
+      // wire save button
+      $('#save-button').click(exportDiagram);
+<!--      $('#save-btn').click();-->
+    </script>
+
+
+<svg id="helper-svg" width="0" height="0" style="visibility: hidden; position: fixed">
+
+</svg>
+</body>
