@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workflow List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
+    <style>
+        .table{
+            margin: auto;
+            width: 50% !important;
+        }
+        .table th {
+           text-align: center;
+        }
+        h1 {
+           text-align: center;
+        }
+        .glyphicon {
+           margin-right:5px;
+        }
+
+        body {
+      color: #6a6c6f;
+      background-color: #f1f3f6;
+      margin-top: 30px;
+    }
+
+    .container {
+      max-width: 960px;
+    }
+
+    .table>tbody>tr.active>td,
+    .table>tbody>tr.active>th,
+    .table>tbody>tr>td.active,
+    .table>tbody>tr>th.active,
+    .table>tfoot>tr.active>td,
+    .table>tfoot>tr.active>th,
+    .table>tfoot>tr>td.active,
+    .table>tfoot>tr>th.active,
+    .table>thead>tr.active>td,
+    .table>thead>tr.active>th,
+    .table>thead>tr>td.active,
+    .table>thead>tr>th.active {
+      background-color: #fff;
+    }
+
+    .table-bordered > tbody > tr > td,
+    .table-bordered > tbody > tr > th,
+    .table-bordered > tfoot > tr > td,
+    .table-bordered > tfoot > tr > th,
+    .table-bordered > thead > tr > td,
+    .table-bordered > thead > tr > th {
+      border-color: #e4e5e7;
+    }
+
+    .table tr.header {
+      font-weight: bold;
+      background-color: #fff;
+      cursor: pointer;
+      -webkit-user-select: none;
+      /* Chrome all / Safari all */
+      -moz-user-select: none;
+      /* Firefox all */
+      -ms-user-select: none;
+      /* IE 10+ */
+      user-select: none;
+      /* Likely future */
+    }
+
+    .table tr:not(.header) {
+      display: none;
+    }
+
+    .table .header td:after {
+      content: "\002b";
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      float: right;
+      color: #999;
+      text-align: center;
+      padding: 3px;
+      transition: transform .25s linear;
+      -webkit-transition: -webkit-transform .25s linear;
+    }
+
+    .table .header.active td:after {
+      content: "\2212";
+    }
+    </style>
+    <script>
+
+        $(document).ready(function() {
+
+          //Fixing jQuery Click Events for the iPad
+          var ua = navigator.userAgent,
+            event = (ua.match(/iPad/i)) ? "touchstart" : "click";
+          if ($('.table').length > 0) {
+            $('.table .header').on(event, function() {
+              $(this).toggleClass("active", "").nextUntil('.header').css('display', function(i, v) {
+                return this.style.display === 'table-row' ? 'none' : 'table-row';
+              });
+            });
+          }
+        })
+    </script>
+</head>
+<body>
+    <h1>Workflow List</h1>
+    <div class="container">
+        <table id="workflowList" class="table table-bordered table-striped table-hover text-center">
+            <thead>
+                <tr>
+                    <td>Workflow</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for flow in data %}
+                    <tr class="header">
+                        <td>{{data[flow].name}}</td>
+
+                        <td>
+                            <a href="viewFlow/{{flow.id}}">
+                             <span class="glyphicon glyphicon-eye-open"></span>
+                             </a>
+                            <a href="editFlow/{{flow.id}}">
+                              <span class="glyphicon glyphicon-edit"></span>
+                            </a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Child1</td>
+                        <td><span class="glyphicon glyphicon-eye-open"></span>
+                        <span class="glyphicon glyphicon-edit"></span></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+<!--    <ul>-->
+<!--        {% for flow in data %}-->
+<!--            <li>Name:{{flow.name}}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+
+</body>
+</html>

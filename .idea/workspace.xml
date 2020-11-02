@@ -11,10 +11,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="210bebf3-99da-496f-83c8-3e97974d5c90" name="Default Changelist" comment="UI changes">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/0589448d83391b75c58cead624f7f9d54225d58e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0aa968a7cbb010daf940ec748eaccd05fda22951" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e4a86ffbcb6787b52fbd6e1ffdef945d060b5ea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25cc11e6ccc59db4e5d293ff3791492af1a52106" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/313361240f35dccfd684beee96fefa68a118aa8c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/53d43689e8f59a96532a4b7fefe5b3fe7dfbe2e3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/542b6ae3fc36ca360f873ed232d1dbf0cf2af3d9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/5731a305acc742da71b92efa27e43dc2e30a950b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/806d6ceb4e60342798038124ccf7dc1a423a4433" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/878c820bccfbe93a9417eb0e0555615c8b21afc7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8e8be8ef09ebd71366ddc5027b33452d48caf8b0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a30168a084648e2f38173111f112ec248c74d538" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac95095330a4a20b1f198c92db70024a198bb660" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f43788fe2b8891247eb921461aaf19dd88f66912" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/script.py.mako" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Screenshot.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/green-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/properties.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/rand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/red-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/yellow-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Node.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flowt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flowt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/mainui.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/mainui.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/workflowList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/workflowList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +72,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/templates/base.html" />
   </component>
   <component name="RecentsManager">
@@ -86,7 +112,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604309026103</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="UI changes">
+      <created>1604317275938</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604317275938</updated>
+    </task>
+    <task id="LOCAL-00004" summary="UI changes">
+      <created>1604317383728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604317383728</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,14 +171,14 @@
       <screen x="0" y="28" width="1440" height="834" />
     </state>
     <state x="503" y="203" width="434" height="498" key="FileChooserDialogImpl/0.28.1440.834@0.28.1440.834" timestamp="1604310063808" />
-    <state x="216" y="80" width="1007" height="737" key="SettingsEditor" timestamp="1604317244197">
+    <state x="216" y="80" width="1007" height="737" key="SettingsEditor" timestamp="1604322148140">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
-    <state x="216" y="80" width="1007" height="737" key="SettingsEditor/0.28.1440.834@0.28.1440.834" timestamp="1604317244197" />
-    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604309070548">
+    <state x="216" y="80" width="1007" height="737" key="SettingsEditor/0.28.1440.834@0.28.1440.834" timestamp="1604322148140" />
+    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604320656622">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
-    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.834@0.28.1440.834" timestamp="1604309070548" />
+    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.834@0.28.1440.834" timestamp="1604320656622" />
     <state x="100" y="128" width="1240" height="634" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604310129887">
       <screen x="0" y="28" width="1440" height="834" />
     </state>

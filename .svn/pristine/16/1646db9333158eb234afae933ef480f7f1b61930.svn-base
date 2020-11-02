@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="210bebf3-99da-496f-83c8-3e97974d5c90" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V8rqcmZxJSi4CsOgE27k8iMwsM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/templates" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="210bebf3-99da-496f-83c8-3e97974d5c90" name="Default Changelist" comment="" />
+      <created>1576645754280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576645754280</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FlowBuilderFlask code checkin" />
+    <option name="LAST_COMMIT_MESSAGE" value="FlowBuilderFlask code checkin" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="744" y="278" key="FileChooserDialogImpl" timestamp="1580366909738">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="744" y="278" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1580366909738" />
+    <state x="457" y="155" key="SettingsEditor" timestamp="1580189517678">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="457" y="155" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1580189517678" />
+    <state x="641" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1580358237209">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="641" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1580358237209" />
+    <state x="704" y="418" key="svn.passwordDialog" timestamp="1580366663477">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="704" y="418" key="svn.passwordDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1580366663477" />
+    <state x="794" y="314" key="svn.repositoryBrowser" timestamp="1580366937876">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="794" y="314" key="svn.repositoryBrowser/0.0.1920.1044@0.0.1920.1044" timestamp="1580366937876" />
+    <state x="714" y="290" key="svn4idea.import.options" timestamp="1580366913388">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="714" y="290" key="svn4idea.import.options/0.0.1920.1044@0.0.1920.1044" timestamp="1580366913388" />
+  </component>
+</project>

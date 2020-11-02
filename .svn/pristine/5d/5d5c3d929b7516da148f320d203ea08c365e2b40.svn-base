@@ -1,0 +1,25 @@
+
+hpython:S1542L"QRename function "editFlow" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Æúá]
+tpython:S117d"XRename this local variable "listLen" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÿ–Üïüÿÿÿÿ
+rpython:S117c"VRename this local variable "wList" to match the regular expression ^[_a-z][a-z0-9_]*$.(‚Ç…ªıÿÿÿÿ
+ipython:S1542H"QRename function "viewFlow" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ëÎ•²
+{python:S117†"^Rename this local variable "workflowModel" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ö´’Ùûÿÿÿÿ
+;python:S125"Remove this commented out code.(Éå¥®şÿÿÿÿ
+6python:S125-"Remove this commented out code.(××è†
+;python:S125'"Remove this commented out code.(ÍË«÷ûÿÿÿÿ
+Fpython:S1481;".Remove the unused local variable "parentFlow".(ÍÌ€Û
+;python:S125="Remove this commented out code.(Éå¥®şÿÿÿÿ
+@python:S1481p"(Remove the unused local variable "many".(“öœÎ
+opython:S117"RRename this parameter "nodeId" to match the regular expression ^[_a-z][a-z0-9_]*$.(‹ùØĞşÿÿÿÿ
+;python:S125%"Remove this commented out code.(éüßîüÿÿÿÿ
+;python:S125D"Remove this commented out code.(éüßîüÿÿÿÿ
+6python:S125"Remove this commented out code.(××è†
+npython:S1542"PRename function "addForm" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(‹ùØĞşÿÿÿÿ
+Bpython:S1481q"%Remove the unused local variable "i".(£ıú¼şÿÿÿÿ
+rpython:S117"[Rename this local variable "parentFlow" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÍÌ€Û
+Fpython:S1481".Remove the unused local variable "parentFlow".(ÍÌ€Û
+cpython:S1192#"KDefine a constant instead of duplicating this literal 'parent is ' 3 times.(Ş³Ù
+rpython:S117;"[Rename this local variable "parentFlow" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÍÌ€Û
+rpython:S1542R"URename function "get_flowById" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÍƒÍ×úÿÿÿÿ
+mpython:S117"WRename this local variable "nodeId" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘¸ğ
+opython:S117"RRename this parameter "flowId" to match the regular expression ^[_a-z][a-z0-9_]*$.(‹ùØĞşÿÿÿÿ
