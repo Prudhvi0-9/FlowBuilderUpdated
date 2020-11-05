@@ -6,41 +6,32 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:Flow(Nov-3)" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="210bebf3-99da-496f-83c8-3e97974d5c90" name="Default Changelist" comment="UI changes">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/0589448d83391b75c58cead624f7f9d54225d58e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0aa968a7cbb010daf940ec748eaccd05fda22951" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e4a86ffbcb6787b52fbd6e1ffdef945d060b5ea" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25cc11e6ccc59db4e5d293ff3791492af1a52106" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/313361240f35dccfd684beee96fefa68a118aa8c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/53d43689e8f59a96532a4b7fefe5b3fe7dfbe2e3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/542b6ae3fc36ca360f873ed232d1dbf0cf2af3d9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/5731a305acc742da71b92efa27e43dc2e30a950b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/806d6ceb4e60342798038124ccf7dc1a423a4433" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/878c820bccfbe93a9417eb0e0555615c8b21afc7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8e8be8ef09ebd71366ddc5027b33452d48caf8b0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a30168a084648e2f38173111f112ec248c74d538" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac95095330a4a20b1f198c92db70024a198bb660" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f43788fe2b8891247eb921461aaf19dd88f66912" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/script.py.mako" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Screenshot.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/green-circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/properties.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/rand.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/red-circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/yellow-circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Node.py" afterDir="false" />
+    <list default="true" id="210bebf3-99da-496f-83c8-3e97974d5c90" name="Default Changelist" comment="sample push">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_3_20,_11_47_AM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a30168a084648e2f38173111f112ec248c74d538" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a30168a084648e2f38173111f112ec248c74d538" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flowt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flowt.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +46,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PATH_TO_GIT" value="/usr/bin/git" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Flow(Nov-3)" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
@@ -72,7 +75,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/templates/base.html" />
   </component>
   <component name="RecentsManager">
@@ -126,7 +129,70 @@
       <option name="project" value="LOCAL" />
       <updated>1604317383728</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="my first">
+      <created>1604379930762</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604379930762</updated>
+    </task>
+    <task id="LOCAL-00006" summary="my first">
+      <created>1604379935709</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604379935709</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Backup">
+      <created>1604379969525</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604379969525</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Backup">
+      <created>1604380599972</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604380599972</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Backup">
+      <created>1604382367200</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604382367200</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Backup">
+      <created>1604382748442</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604382748442</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Backup">
+      <created>1604382897640</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1604382897640</updated>
+    </task>
+    <task id="LOCAL-00012" summary="sECOND PUSH">
+      <created>1604383166017</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1604383166017</updated>
+    </task>
+    <task id="LOCAL-00013" summary="sample push">
+      <created>1604384707189</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1604384707190</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,7 +200,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Flow(Nov-3)" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -144,7 +222,11 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="UI changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI changes" />
+    <MESSAGE value="my first" />
+    <MESSAGE value="Backup" />
+    <MESSAGE value="sECOND PUSH" />
+    <MESSAGE value="sample push" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="444" y="259" width="541" height="378" key="#Notifications" timestamp="1604301557209">
@@ -167,18 +249,26 @@
       <screen x="0" y="28" width="1440" height="834" />
     </state>
     <state x="272" y="28" width="886" height="834" key="CommitChangelistDialog2/0.28.1440.834@0.28.1440.834" timestamp="1604051980630" />
+    <state x="253" y="103" width="924" height="691" key="DBNavigator.ProjectSettingsDialog" timestamp="1604561430433">
+      <screen x="0" y="28" width="1440" height="834" />
+    </state>
+    <state x="253" y="103" width="924" height="691" key="DBNavigator.ProjectSettingsDialog/0.28.1440.834@0.28.1440.834" timestamp="1604561430433" />
+    <state x="134" y="100" width="1152" height="704" key="DiffContextDialog" timestamp="1604382325665">
+      <screen x="0" y="28" width="1440" height="834" />
+    </state>
+    <state x="134" y="100" width="1152" height="704" key="DiffContextDialog/0.28.1440.834@0.28.1440.834" timestamp="1604382325665" />
     <state x="503" y="203" width="434" height="498" key="FileChooserDialogImpl" timestamp="1604310063808">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
     <state x="503" y="203" width="434" height="498" key="FileChooserDialogImpl/0.28.1440.834@0.28.1440.834" timestamp="1604310063808" />
-    <state x="216" y="80" width="1007" height="737" key="SettingsEditor" timestamp="1604322148140">
+    <state x="216" y="80" width="1007" height="737" key="SettingsEditor" timestamp="1604383558752">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
-    <state x="216" y="80" width="1007" height="737" key="SettingsEditor/0.28.1440.834@0.28.1440.834" timestamp="1604322148140" />
-    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604320656622">
+    <state x="216" y="80" width="1007" height="737" key="SettingsEditor/0.28.1440.834@0.28.1440.834" timestamp="1604383558752" />
+    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604384709535">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
-    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.834@0.28.1440.834" timestamp="1604320656622" />
+    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.834@0.28.1440.834" timestamp="1604384709535" />
     <state x="100" y="128" width="1240" height="634" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604310129887">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
@@ -187,5 +277,9 @@
       <screen x="0" y="28" width="1440" height="834" />
     </state>
     <state x="530" y="262" width="407" height="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1440.834@0.28.1440.834" timestamp="1604300643393" />
+    <state x="456" y="116" width="518" height="664" key="git4idea.branch.GitSmartOperationDialog" timestamp="1604384251574">
+      <screen x="0" y="28" width="1440" height="834" />
+    </state>
+    <state x="456" y="116" width="518" height="664" key="git4idea.branch.GitSmartOperationDialog/0.28.1440.834@0.28.1440.834" timestamp="1604384251574" />
   </component>
 </project>

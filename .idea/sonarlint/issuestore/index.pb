@@ -30,3 +30,5 @@ I
 src/templates/mainui.html,2/5/25cc11e6ccc59db4e5d293ff3791492af1a52106
 O
 src/templates/workflowList.html,8/7/878c820bccfbe93a9417eb0e0555615c8b21afc7
+F
+src/templates/xmljs.py,8/5/85bcf42daf32113b2243fd19f39f71ee1bfca929
