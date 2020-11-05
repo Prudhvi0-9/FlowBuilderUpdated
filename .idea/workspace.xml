@@ -26,12 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="210bebf3-99da-496f-83c8-3e97974d5c90" name="Default Changelist" comment="sample push">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_3_20,_11_47_AM_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a30168a084648e2f38173111f112ec248c74d538" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a30168a084648e2f38173111f112ec248c74d538" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flowt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flowt.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604384707190</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated code">
+      <created>1604567268043</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1604567268043</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,7 +228,8 @@
     <MESSAGE value="Backup" />
     <MESSAGE value="sECOND PUSH" />
     <MESSAGE value="sample push" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Updated code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="444" y="259" width="541" height="378" key="#Notifications" timestamp="1604301557209">
@@ -265,10 +268,10 @@
       <screen x="0" y="28" width="1440" height="834" />
     </state>
     <state x="216" y="80" width="1007" height="737" key="SettingsEditor/0.28.1440.834@0.28.1440.834" timestamp="1604383558752" />
-    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604384709535">
+    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604567290576">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
-    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.834@0.28.1440.834" timestamp="1604384709535" />
+    <state x="315" y="181" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.834@0.28.1440.834" timestamp="1604567290576" />
     <state x="100" y="128" width="1240" height="634" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604310129887">
       <screen x="0" y="28" width="1440" height="834" />
     </state>
